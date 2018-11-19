@@ -2,7 +2,7 @@
 % A function with a given DEM, input a GPS location, output a terrian
 % Input double(Longitude,Altitude)
 % Output int16(Hight)
-function H = GPS2HIGHTC(Latitude,Lontitude,map) %lat:10 lon:9
+function [H,c_record] = GPS2HIGHTC(Latitude,Lontitude,map) %lat:10 lon:9
     MapSize = 3601;
     amount = size(Latitude,1);
     for i = 1:amount
@@ -39,6 +39,7 @@ function H = GPS2HIGHTC(Latitude,Lontitude,map) %lat:10 lon:9
     %     end
     %     H = map(c(1),c(2));
     %     H = (map(c(1),c(2))+map(c1(1),c1(2))+map(c2(1),c2(2)))/3;
-          H(i) = max([map(c(1),c(2)), map(c1(1),c1(2)) ,map(c2(1),c2(2)) ]);
+    c_record(i,:) = c;
+          H(i,1) = max([map(c(1),c(2)), map(c1(1),c1(2)) ,map(c2(1),c2(2)) ]);
     end
 end
