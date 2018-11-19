@@ -4,7 +4,7 @@
 % Output int16(Hight)
 function H = GPS2HIGHTC(Latitude,Lontitude,map) %lat:10 lon:9
     MapSize = 3601;
-    amount = size(Latitude,2);
+    amount = size(Latitude,1);
     for i = 1:amount
         Lat = Latitude(i);
         Lon = Lontitude(i);
