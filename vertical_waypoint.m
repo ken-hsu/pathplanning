@@ -73,13 +73,13 @@ for i = 1:size(slope2,1)-1
     end
 end
 index = find(delete_matrix == 0);
-dis_accu(index) = [];
+% dis_accu(index) = [];
 output(index,:) = [];
 % plot(dis_accu,H,'*');axis equal
 % hold on;
 % plot(dis_accu,hight2+20);axis equal
 % legend('original','adjust');
-% figure;
+figure;
 
 [xx,yy] = meshgrid(1:3601,3601:-1:1);
 mesh(xx,yy,map/8);
