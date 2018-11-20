@@ -1,6 +1,6 @@
-function () = HIGHT2SLOPE
-    for i = 1 :size(H,1)-1
-        hight_diff = H(i+1) - H(i);
-        slope(i,1) = double(hight_diff)/dis_meter(i);
+function slope = HIGHT2SLOPE(hight,dis)
+    for i = 1 :size(hight,1)-1
+        hight_diff = hight(i+1) - hight(i);
+        slope(i,1) = hight_diff/dis(i);
     end
 end

@@ -31,29 +31,38 @@ for i = 1:size(waypoint_add,1)-1
 end
 
 %% Calculate slope
-[H,c_record] = GPS2HIGHTC(waypoint_add(:,1),waypoint_add(:,2),map);
-for i = 1 :size(H,1)-1
-    hight_diff = H(i+1) - H(i);
-    slope(i,1) = double(hight_diff)/dis_meter(i);
-end
-% ss = 1;
-% ee = 3601;
-% [xx,yy] = meshgrid(ss:ee,ss:ee);
-% mesh(xx,yy,map(ss:ee,ss:ee));
-% hold on;
-% plot3(c_record(:,2),c_record(:,1),H,'*r');
+[H,c_record] = GPS2HIGHTC(waypoint_add(:,2),waypoint_add(:,1),map);
+slope = HIGHT2SLOPE(double(H),dis_meter);
+
+
 %% slope judgement
-hight = double(H);
-slope_threshold = 0.9;
-for i = 1:size(slope,1)
-    if slope(i,1) > slope_threshold
-        num_of_advance = 0;
-        slope_adjust = slope_threshold+1;
-        while (~isempty(find(slope_adjust>slope_threshold)))
-            num_of_advance = num_of_advance + 1;
-            hight_change = linspace(hight(i-num_of_advance),hight(i+1),num_of_advance+2);
-            hight(i-num_of_advance:i+1) = hight_change;
-            slope_adjust = 
-        end
+hight2 = double(H);
+slope_threshold = 0.15;
+
+point_need_change = find(slope > slope_threshold);
+for i = 1:size(point_need_change,1)
+    point_advance = 0;
+    param = slope(point_need_change(i,1));
+    while (param > slope_threshold)
+        point_advance = point_advance + 1;
+        ps = point_need_change(i,1) - point_advance;
+        pf = point_need_change(i,1) + 1;
+        param = HIGHT2SLOPE([hight2(ps);hight2(pf)],dis_accu(pf)-dis_accu(ps));
     end
+    hight_change = hight2(ps) + param*(dis_accu(ps+1:pf-1)-dis_accu(ps));
+    hight2(ps+1:pf-1) = hight_change;
 end
+
+% plot(dis_accu,H,'*');axis equal
+% hold on;
+% plot(dis_accu,hight2+20);axis equal
+% legend('original','adjust');
+% figure;
+ss = 1000;
+tt = 2800;
+[xx,yy] = meshgrid(ss:tt,tt:-1:ss);
+mesh(xx,yy,map(ss:tt,ss:tt)/5);axis equal
+hold on;
+plot3(c_record(:,2),3602-c_record(:,1),H/5,'*k');
+hold on;
+plot3(c_record(:,2),3602-c_record(:,1),hight2/5,'*r');
