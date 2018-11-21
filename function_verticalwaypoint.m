@@ -1,5 +1,5 @@
-function output = function_verticalwaypoint(waypoint)
-map = imread('ASTGTM2_N24E121_dem.tif');
+function [vertical_waypoint,index_of_waypoint] = function_verticalwaypoint(waypoint,map)
+% map = imread('ASTGTM2_N24E121_dem.tif');
 %% Increase waypoint
 step_accu = 0;
 for i = 1:size(waypoint,1)-1
@@ -26,7 +26,7 @@ for i = 1:size(waypoint_add,1)-1
 end
 
 %% Calculate slope
-[H,c_record] = GPS2HIGHTC(waypoint_add(:,1),waypoint_add(:,2),map);
+[H,index_of_waypoint] = GPS2HIGHTC(waypoint_add(:,1),waypoint_add(:,2),map);
 slope = HIGHT2SLOPE(double(H),dis_meter);
 
 
@@ -48,8 +48,8 @@ for i = 1:size(point_need_change,1)
     hight2(ps+1:pf-1) = hight_change;
     record_same_slope(i,1:point_advance) = ps+1:pf-1;
 end
-output(:,1:2) = waypoint_add;
-output(:,3) = hight2;
+vertical_waypoint(:,1:2) = waypoint_add;
+vertical_waypoint(:,3) = hight2;
 %% delete redundant point
 delete_matrix = ones(size(H,1),1);
 slope2 = HIGHT2SLOPE(hight2,dis_meter);
@@ -65,6 +65,7 @@ for i = 1:size(slope2,1)-1
     end
 end
 index = find(delete_matrix == 0);
-dis_accu(index) = [];
-output(index,:) = [];
+% dis_accu(index) = [];
+index_of_waypoint(index,:) = [];
+vertical_waypoint(index,:) = [];
 end

@@ -8,7 +8,7 @@ waypoint = [24.9202,120.7023;
             24.7020,120.9012;
             24.9020,120.7012];
         
-%% Increase waypoint
+%% Increase waypoint(according the minimum step in GPS2HIGHT)
 step_accu = 0;
 for i = 1:size(waypoint,1)-1
     dis_latlon = waypoint(i+1,:) - waypoint(i,:);
