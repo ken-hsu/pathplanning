@@ -21,7 +21,6 @@ for i = 1:size(waypoint,1)-1
     step_accu = steps + step_accu;
 end
 waypoint_add(1+step_accu,:) = waypoint(end,:);
-
 %% Calculate distance
 InitLat = waypoint(1,1);
 dis_accu(1,1) = 0;
@@ -32,6 +31,12 @@ for i = 1:size(waypoint_add,1)-1
     dis_meter(i,1) = sqrt((dis_latlon(1)*MetperLat)^2  + (dis_latlon(2)*MetperLon)^2);
     dis_accu(i+1,1) = dis_accu(i,1) + dis_meter(i,1);
 end
+%% add waypoint for position uncertainty
+uncertainty = 20;
+uncertain_Lat = uncertainty/MetperLat;
+uncertain_Lon = uncertainty/MetperLon;
+direc = waypoint_add(2,:)-waypoint_add(1,:);
+s1 = -1*(direc(1)/direc(2)); % Lat/Lon
 
 %% Calculate slope
 [H,c_record] = GPS2HIGHTC(waypoint_add(:,1),waypoint_add(:,2),map);

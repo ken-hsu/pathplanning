@@ -1,0 +1,14 @@
+<html>
+<body>
+<script src="resources/eml_report_loadable_data.js"></script>
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="45,1" id="srcline1">1</a></span><span class="line"><span class="keyword">function</span> <span class="var type1" id="S2T4U3">slope</span> = HIGHT2SLOPE(<span class="var type1" id="S3T12U6">hight</span>,<span class="var type1" id="S4T4U7">dis</span>)</span></span>
+<span class="srcline"><span class="lineno"><a href="45,2" id="srcline2">2</a></span><span class="line">    <span class="mxinfo " id="T4:U4"><span class="var type1" id="S2T4U10">slope</span> = <span class="mxinfo " id="T4:U6">zeros(size(<span class="var type1" id="S3T12U16">hight</span>,1)-1,1)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="45,3" id="srcline3">3</a></span><span class="line">    <span class="keyword">for</span> <span class="var type1" id="S7T4U22">i</span> = <span class="mxinfo " id="T4:U9">1 :size(<span class="var type1" id="S3T12U28">hight</span>,1)-1</span></span></span>
+<span class="srcline"><span class="lineno"><a href="45,4" id="srcline4">4</a></span><span class="line">        <span class="mxinfo " id="T4:U11"><span class="var type1" id="S8T4U33">hight_diff</span> = <span class="mxinfo " id="T4:U13"><span class="mxinfo " id="T4:U14"><span class="var type1" id="S3T12U36">hight</span>(<span class="mxinfo " id="T5:U16"><span class="var type1" id="S7T4U38">i</span>+1</span>)</span> - <span class="mxinfo " id="T4:U18"><span class="var type1" id="S3T12U41">hight</span>(<span class="var type1" id="S7T4U42">i</span>)</span></span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="45,5" id="srcline5">5</a></span><span class="line">        <span class="mxinfo " id="T4:U21"><span class="var type1" id="S2T4U46">slope</span>(<span class="var type1" id="S7T4U47">i</span>,1) = <span class="mxinfo " id="T4:U24"><span class="var type1" id="S8T4U50">hight_diff</span>/<span class="var type1" id="S4T4U52">dis</span>(<span class="var type1" id="S7T4U53">i</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="45,6" id="srcline6">6</a></span><span class="line">    <span class="keyword">end</span></span></span>
+<span class="srcline"><span class="lineno"><a href="45,7" id="srcline7">7</a></span><span class="line"><span class="keyword">end</span></span></span>
+</pre>
+</body>
+</html>

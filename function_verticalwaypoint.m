@@ -1,14 +1,30 @@
-function [vertical_waypoint,index_of_waypoint] = function_verticalwaypoint(waypoint,map)
+function [vertical_waypoint,index_of_waypoint,dis_accu] = function_verticalwaypoint(waypoint,map)
 % map = imread('ASTGTM2_N24E121_dem.tif');
+% waypoint = [24.92021,121.70231;
+%             24.70202,121.90121;
+%             24.90202,121.70122];
+% map = imread('ASTGTM2_N25E055_dem.tif');
+% waypoint = [25.0783,55.4982;
+%             25.0883,55.5082;
+%             25.0983,55.5182;
+%             25.4983,55.7182];
+temp_waypoint = floor(waypoint*10000);
+waypoint = temp_waypoint/10000;
 %% Increase waypoint
 step_accu = 0;
+accu = 0;
+for i = 1:size(waypoint,1)-1
+    steps1 = floor(abs(waypoint(i+1,2) - waypoint(i,2))*10000);
+    accu = steps1 + accu;
+end
+waypoint_add = zeros(accu+1,2);
 for i = 1:size(waypoint,1)-1
     dis_latlon = waypoint(i+1,:) - waypoint(i,:);
     slope = abs(dis_latlon(1)/dis_latlon(2));
-    steps = abs(round(dis_latlon(2)/0.0001));
+    steps = abs(floor(dis_latlon(2)*10000));
     for j = 0:steps-1
         waypoint_add(j+1+step_accu,2) = waypoint(i,2) + 0.0001*j*sign(dis_latlon(2));
-        waypoint_add(j+1+step_accu,1) = waypoint(i,1) + round(slope*0.0001*j*sign(dis_latlon(1)),4);
+        waypoint_add(j+1+step_accu,1) = waypoint(i,1) + slope*0.0001*j*sign(dis_latlon(1));
     end
     step_accu = steps + step_accu;
 end
@@ -16,7 +32,8 @@ waypoint_add(1+step_accu,:) = waypoint(end,:);
 
 %% Calculate distance
 InitLat = waypoint(1,1);
-dis_accu(1,1) = 0;
+dis_accu = zeros(accu+1,1);
+dis_meter = zeros(accu,1);
 MetperLat = 110574;
 MetperLon = 111320*cos(InitLat*pi/180); % meter per degree
 for i = 1:size(waypoint_add,1)-1
@@ -35,6 +52,8 @@ hight2 = double(H);
 slope_threshold = 0.15;
 
 point_need_change = find(slope > slope_threshold);
+ps = 0;
+pf = 0;
 for i = 1:size(point_need_change,1)
     point_advance = 0;
     param = slope(point_need_change(i,1));
@@ -42,12 +61,18 @@ for i = 1:size(point_need_change,1)
         point_advance = point_advance + 1;
         ps = point_need_change(i,1) - point_advance;
         pf = point_need_change(i,1) + 1;
+%         if ps == 0
+%             error;
+%         end
         param = HIGHT2SLOPE([hight2(ps);hight2(pf)],dis_accu(pf)-dis_accu(ps));
     end
-    hight_change = hight2(ps) + param*(dis_accu(ps+1:pf-1)-dis_accu(ps));
+    ps_next = ps+1;
+    pf_prev = pf-1;
+    hight_change = hight2(ps) + param*(dis_accu(ps_next:pf_prev)-dis_accu(ps));
     hight2(ps+1:pf-1) = hight_change;
-    record_same_slope(i,1:point_advance) = ps+1:pf-1;
+    %record_same_slope(i,1:point_advance) = ps+1:pf-1;
 end
+vertical_waypoint = zeros(accu+1,3);
 vertical_waypoint(:,1:2) = waypoint_add;
 vertical_waypoint(:,3) = hight2;
 %% delete redundant point
@@ -65,7 +90,7 @@ for i = 1:size(slope2,1)-1
     end
 end
 index = find(delete_matrix == 0);
-% dis_accu(index) = [];
+dis_accu(index) = [];
 index_of_waypoint(index,:) = [];
 vertical_waypoint(index,:) = [];
 end
