@@ -1,0 +1,322 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ken/src/Ken/pathplanning/exam/For all/GPS2HIGHTC.h
+cmath
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+GPS2HIGHTC_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/GPS2HIGHTC_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/GPS2HIGHTC_initialize.h
+cmath
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+GPS2HIGHTC_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/GPS2HIGHTC_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/GPS2HIGHTC_terminate.h
+cmath
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+GPS2HIGHTC_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/GPS2HIGHTC_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/GPS2HIGHTC_types.h
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/HIGHT2SLOPE.h
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+HIGHT2SLOPE_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/HIGHT2SLOPE_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/HIGHT2SLOPE_initialize.h
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+HIGHT2SLOPE_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/HIGHT2SLOPE_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/HIGHT2SLOPE_terminate.h
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+HIGHT2SLOPE_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/HIGHT2SLOPE_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/HIGHT2SLOPE_types.h
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/calculate_distance2.h
+cmath
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+calculate_distance2_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/calculate_distance2_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/calculate_distance2_emxAPI.h
+cmath
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+calculate_distance2_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/calculate_distance2_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/calculate_distance2_initialize.h
+cmath
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+calculate_distance2_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/calculate_distance2_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/calculate_distance2_terminate.h
+cmath
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+calculate_distance2_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/calculate_distance2_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/calculate_distance2_types.h
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/exampleforall.cpp
+rt_nonfinite.h
+/home/ken/src/Ken/pathplanning/exam/For all/rt_nonfinite.h
+increase_waypoint2.h
+/home/ken/src/Ken/pathplanning/exam/For all/increase_waypoint2.h
+increase_waypoint2_terminate.h
+/home/ken/src/Ken/pathplanning/exam/For all/increase_waypoint2_terminate.h
+increase_waypoint2_emxAPI.h
+/home/ken/src/Ken/pathplanning/exam/For all/increase_waypoint2_emxAPI.h
+increase_waypoint2_initialize.h
+/home/ken/src/Ken/pathplanning/exam/For all/increase_waypoint2_initialize.h
+calculate_distance2.h
+/home/ken/src/Ken/pathplanning/exam/For all/calculate_distance2.h
+calculate_distance2_terminate.h
+/home/ken/src/Ken/pathplanning/exam/For all/calculate_distance2_terminate.h
+calculate_distance2_emxAPI.h
+/home/ken/src/Ken/pathplanning/exam/For all/calculate_distance2_emxAPI.h
+calculate_distance2_initialize.h
+/home/ken/src/Ken/pathplanning/exam/For all/calculate_distance2_initialize.h
+GPS2HIGHTC.h
+/home/ken/src/Ken/pathplanning/exam/For all/GPS2HIGHTC.h
+GPS2HIGHTC_terminate.h
+/home/ken/src/Ken/pathplanning/exam/For all/GPS2HIGHTC_terminate.h
+GPS2HIGHTC_initialize.h
+/home/ken/src/Ken/pathplanning/exam/For all/GPS2HIGHTC_initialize.h
+HIGHT2SLOPE.h
+/home/ken/src/Ken/pathplanning/exam/For all/HIGHT2SLOPE.h
+HIGHT2SLOPE_terminate.h
+/home/ken/src/Ken/pathplanning/exam/For all/HIGHT2SLOPE_terminate.h
+HIGHT2SLOPE_initialize.h
+/home/ken/src/Ken/pathplanning/exam/For all/HIGHT2SLOPE_initialize.h
+slope_judgement.h
+/home/ken/src/Ken/pathplanning/exam/For all/slope_judgement.h
+slope_judgement_terminate.h
+/home/ken/src/Ken/pathplanning/exam/For all/slope_judgement_terminate.h
+slope_judgement_emxAPI.h
+/home/ken/src/Ken/pathplanning/exam/For all/slope_judgement_emxAPI.h
+slope_judgement_initialize.h
+/home/ken/src/Ken/pathplanning/exam/For all/slope_judgement_initialize.h
+iostream
+-
+stdio.h
+-
+opencv2/opencv.hpp
+-
+
+/home/ken/src/Ken/pathplanning/exam/For all/increase_waypoint2.h
+cmath
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+increase_waypoint2_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/increase_waypoint2_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/increase_waypoint2_emxAPI.h
+cmath
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+increase_waypoint2_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/increase_waypoint2_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/increase_waypoint2_initialize.h
+cmath
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+increase_waypoint2_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/increase_waypoint2_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/increase_waypoint2_terminate.h
+cmath
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+increase_waypoint2_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/increase_waypoint2_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/increase_waypoint2_types.h
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/rt_nonfinite.h
+float.h
+-
+stddef.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/slope_judgement.h
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+slope_judgement_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/slope_judgement_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/slope_judgement_emxAPI.h
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+slope_judgement_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/slope_judgement_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/slope_judgement_initialize.h
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+slope_judgement_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/slope_judgement_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/slope_judgement_terminate.h
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+slope_judgement_types.h
+/home/ken/src/Ken/pathplanning/exam/For all/slope_judgement_types.h
+
+/home/ken/src/Ken/pathplanning/exam/For all/slope_judgement_types.h
+rtwtypes.h
+/home/ken/src/Ken/pathplanning/exam/For all/rtwtypes.h
+

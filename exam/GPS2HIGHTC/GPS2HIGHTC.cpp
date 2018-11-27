@@ -104,14 +104,14 @@ void GPS2HIGHTC(const double Latitude_data[], const int Latitude_size[1], const
 
     //          H = map(c(1),c(2));
     //      H = (map(c(1),c(2))+map(c1(1),c1(2))+map(c2(1),c2(2)))/3;
-    varargin_1[0] = map[((int)(3602.0 - (LatDec4p1 + 1.0)) + 3601 * ((int)
-      (LonDec4p1 + 1.0) - 1)) - 1];
-    varargin_1[1] = map[((int)(3602.0 - (LatDec4p1 + 1.0)) + 3601 * ((int)
-      (LonDec4p1 + 1.0) - 1)) - 1];
-    varargin_1[2] = map[((int)(3602.0 - (LatDec4p1 + 1.0)) + 3601 * ((int)
-      LonDec4 - 1)) - 1];
-    mtmp = map[((int)(3602.0 - (LatDec4p1 + 1.0)) + 3601 * ((int)(LonDec4p1 +
-      1.0) - 1)) - 1];
+    varargin_1[0] = map[((int)(3602.0 - (LatDec4p1 + 1.0) - 1.0)*3601 + ((int)
+      (LonDec4p1 + 1.0))) - 1];
+    varargin_1[1] = map[((int)(3602.0 - (LatDec4p1 + 1.0) - 1.0)*3601 + ((int)
+      (LonDec4p1 + 1.0))) - 1];
+    varargin_1[2] = map[((int)(3602.0 - (LatDec4p1 + 1.0) - 1.0)*3601 + ((int)
+      LonDec4)) - 1];
+    mtmp = map[((int)(3602.0 - (LatDec4p1 + 1.0) - 1.0)*3601 + ((int)(LonDec4p1 +
+      1.0))) - 1];
     for (ix = 0; ix < 2; ix++) {
       c_record_data[loop_ub + c_record_size[0] * ix] = c[ix];
       if (varargin_1[ix + 1] > mtmp) {

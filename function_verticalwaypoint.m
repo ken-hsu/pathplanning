@@ -2,8 +2,8 @@ function [vertical_waypoint,index_of_waypoint,num_point] = function_verticalwayp
 clear all;
 %% 1
 map = imread('ASTGTM2_N24E121_dem.tif');
-waypoint = [22.0008,121.1002;
-            22.0001,121.1012];
+waypoint = [24.1254,121.4562;
+            24.6899,121.4511];
 % map = imread('ASTGTM2_N25E055_dem.tif');
 %% 2
 % waypoint = _IN
@@ -24,14 +24,14 @@ waypoint = temp_waypoint/10000;
 InitLat = waypoint(1,1);
 [x_coordination,dis_meter] = calculate_distance2(waypoint_add_lat,waypoint_add_lon,num_point,InitLat);
 %% get DEM data
-[H,index_of_waypoint] = GPS2HIGHTC(waypoint_add_lat,waypoint_add_lon,map);
+[H,index_of_waypoint] = GPS2HIGHTC(waypoint_add_lat,waypoint_add_lon,map)
 %% Calculate slope
-slope = HIGHT2SLOPE(double(H),dis_meter);
+slope = HIGHT2SLOPE(double(H),dis_meter)
 
 
 %% slope judgement
 slope_threshold = 0.15;
-[vertical_waypoint,unvalid] = slope_judgement(double(H),slope,x_coordination,num_point,slope_threshold);
+[vertical_waypoint,unvalid] = slope_judgement(double(H),slope,x_coordination,num_point,slope_threshold)
 %% delete redundant point
 % delete_matrix = ones(size(H,1),1);
 % slope2 = HIGHT2SLOPE(vertical_waypoint(:,3),dis_meter);

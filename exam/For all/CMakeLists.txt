@@ -16,15 +16,25 @@ GPS2HIGHTC_terminate.cpp
 increase_waypoint2.cpp
 increase_waypoint2_initialize.cpp
 increase_waypoint2_terminate.cpp
+HIGHT2SLOPE.cpp
+HIGHT2SLOPE_initialize.cpp
+HIGHT2SLOPE_terminate.cpp
+slope_judgement.cpp
+slope_judgement_emxAPI.cpp
+slope_judgement_emxutil.cpp
+slope_judgement_initialize.cpp
+slope_judgement_terminate.cpp
+
 rtGetInf.cpp
 rtGetNaN.cpp
 rt_nonfinite.cpp
+
 )
 
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 add_executable(opencv_test
- generate.cpp
+ exampleforall.cpp
  )
 # link_directories(${OpenCV_LIBRARY_DIRS})
 target_link_libraries(opencv_test 

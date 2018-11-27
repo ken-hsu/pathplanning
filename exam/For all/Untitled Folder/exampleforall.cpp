@@ -16,25 +16,37 @@
 #include "calculate_distance2_initialize.h"
 
 /**
- * calcualte_distance2
+ * GPS2HIGHTC
  */
+#include "GPS2HIGHTC.h"
+#include "GPS2HIGHTC_terminate.h"
+#include "GPS2HIGHTC_initialize.h"
+
+/**
+ * HIGHT2SLOPE
+ */
+#include "HIGHT2SLOPE.h"
+#include "HIGHT2SLOPE_terminate.h"
+#include "HIGHT2SLOPE_initialize.h"
 
 #include <iostream> 
 #include <stdio.h>
 using namespace std; 
 
+#include <opencv2/opencv.hpp>
+
 int main(){
     /**
      * increase_waypoint2
      */
-    double lat[2] = {22.0008,22.0001};
-    double lon[2] = {121.1002,121.1012};
-    emxArray_real_T *waypoint_add_lat;
-    emxArray_real_T *waypoint_add_lon;
+    double lat[2] = {22.3339,22.3338};
+    double lon[2] = {121.4012,121.4002};
+    emxArray_real_T *waypoint_add_lat_ptr;
+    emxArray_real_T *waypoint_add_lon_ptr;
     double waypoint_add_amount;
-    emxInitArray_real_T(&waypoint_add_lat, 1);
-    emxInitArray_real_T(&waypoint_add_lon, 1);
-    increase_waypoint2(lat, lon, waypoint_add_lat, waypoint_add_lon,
+    emxInitArray_real_T(&waypoint_add_lat_ptr, 1);
+    emxInitArray_real_T(&waypoint_add_lon_ptr, 1);
+    increase_waypoint2(lat, lon, waypoint_add_lat_ptr, waypoint_add_lon_ptr,
                      &waypoint_add_amount);
 
 // for (int i = 0 ;i < (int)waypoint_add_amount; i++){
@@ -56,16 +68,50 @@ int main(){
     double init_lat = lat[0];
 
     for (int i = 0; i<(int)waypoint_add_amount; i++){
-        waypoint_lat_data[i] = waypoint_add_lat->data[i];
-        waypoint_lon_data[i] = waypoint_add_lon->data[i];
+        waypoint_lat_data[i] = waypoint_add_lat_ptr->data[i];
+        waypoint_lon_data[i] = waypoint_add_lon_ptr->data[i];
     }
     calculate_distance2(waypoint_lat_data, waypoint_lat_size, waypoint_lon_data,
                         waypoint_lon_size,num_point ,init_lat,
                         x_coordination, dis_meter);
+// for (int i = 0 ;i < (int)num_point; i++){
+// printf("%.4f \n",x_coordination->data[i]);
+// }
 
+ /**
+ * GPS2HIGHTC
+ */   
+cv::Mat img = cv::imread("/home/ken/src/Ken/pathplanning/ASTGTM2_N24E121_dem.tif",-1);
+cv::imshow("rgb",img);
+short int* img_data_ptr = (short int*)img.data;
 
-for (int i = 0 ;i < (int)num_point; i++){
-printf("%.4f \n",x_coordination->data[i]);
+int Latitude_size[1] = {waypoint_add_amount};
+int Lontitude_size[1] = {waypoint_add_amount};
+double H_data[4000];
+int H_size[1];
+double c_record_data[8000];
+int c_record_size[2];
+      GPS2HIGHTC(waypoint_lat_data, Latitude_size, waypoint_lon_data, Lontitude_size, img_data_ptr,
+             H_data, H_size, c_record_data, c_record_size);
+for (int i = 0; i <(int)num_point; i++ ){
+    printf("[Hight is %.4f || H size is %d || index row %.4f || index column %.4f ]\n",
+        H_data[i],H_size[0],c_record_data[i],c_record_data[i+11]);
 }
-                     
+
+/**
+ * HIGHT2SLOPE
+ */
+int hight_size[1] = {waypoint_add_amount};
+int dis_size[1] = {waypoint_add_amount};
+double dis_data[4000];
+double slope_data[3999];
+int slope_size[1];
+for (int i = 0; i <(int)num_point; i++ ){
+    dis_data[i] = dis_meter->data[i];
+}   
+HIGHT2SLOPE(H_data, hight_size, dis_data, dis_size, slope_data, slope_size);
+for (int i = 0; i < hight_size[0]; i++){
+    printf("%f \n",slope_data[i]);
+}
+                   
 }  

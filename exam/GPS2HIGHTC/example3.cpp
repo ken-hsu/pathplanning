@@ -19,10 +19,10 @@ printf("image index value: is %d \n",a);
 short int* img_data_ptr = (short int*)img.data;
 
 
-double Latitude_data[4000] = {24.3300};
-int Latitude_size[1] = {1};
-double Lontitude_data[4000] = {121.1200};
-int Lontitude_size[1] = {1};
+double Latitude_data[4000] = {24.1254,24.6899};
+int Latitude_size[1] = {2};
+double Lontitude_data[4000] = {121.4562,121.4511};
+int Lontitude_size[1] = {2};
 // static short iv0[12967201];
 double H_data[4000];
 int H_size[1];
@@ -30,6 +30,10 @@ double c_record_data[8000];
 int c_record_size[2];
       GPS2HIGHTC(Latitude_data, Latitude_size, Lontitude_data, Lontitude_size, img_data_ptr,
              H_data, H_size, c_record_data, c_record_size);
-printf("[Hight is %.4f \nH size is %d \nindex row %.4f \nindex column %.4f]",H_data[0],H_size[0],c_record_data[0],c_record_data[1]);
+             for (int i = 0; i < Latitude_size[0]; i++){
+                  printf("[row %.4f ,column %.4f :Hight is %.4f ]\n",
+                  c_record_data[i],c_record_data[i+Latitude_size[0]],H_data[i]);
+             }
+             printf("%d",img_data_ptr[69918]);
 
 }

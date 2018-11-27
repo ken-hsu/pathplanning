@@ -10,7 +10,7 @@ using namespace std;
 int main(){
     double hight_data[4000]={110,120,140,100};
     int hight_size[1] = {4};
-    double dis_data[4000] = {2,2,2,2};
+    double dis_data[4000] = {2,4,5};
     int dis_size[1] = {4};
     double slope_data[3999];
     int slope_size[1];
