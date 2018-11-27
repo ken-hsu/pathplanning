@@ -1,7 +1,7 @@
 <deployment-project plugin="plugin.coder" plugin-version="R2016a">
-  <configuration build-checksum="4087043670" file="/home/ken/src/Ken/pathplanning/function_verticalwaypoint.prj" location="/home/ken/src/Ken/pathplanning" name="function_verticalwaypoint" target="target.unifiedcoder" target-name="MATLAB Coder">
+  <configuration build-checksum="2529996452" file="/home/ken/src/Ken/pathplanning/function_verticalwaypoint.prj" location="/home/ken/src/Ken/pathplanning" name="function_verticalwaypoint" target="target.unifiedcoder" target-name="MATLAB Coder">
     <profile key="profile.mex">
-      <param.BuiltInstrumentedMex />
+      <param.BuiltInstrumentedMex>false</param.BuiltInstrumentedMex>
       <param.RanInstrumentedMex>false</param.RanInstrumentedMex>
       <param.WorkingFolder>option.WorkingFolder.Project</param.WorkingFolder>
       <param.SpecifiedWorkingFolder />
@@ -56,7 +56,7 @@
       <param.ConstantInputs>option.ConstantInputs.CheckValues</param.ConstantInputs>
       <param.EnableCRICodeCoverage>true</param.EnableCRICodeCoverage>
       <param.EnableJIT>false</param.EnableJIT>
-      <param.EnableJITSilentBailOut />
+      <param.EnableJITSilentBailOut>false</param.EnableJITSilentBailOut>
       <param.CheckForIssuesJIT>true</param.CheckForIssuesJIT>
       <unset>
         <param.BuiltInstrumentedMex />
@@ -180,7 +180,7 @@
       <param.CustomSource />
       <param.CustomLibrary />
       <param.PostCodeGenCommand />
-      <param.TargetLangStandard>C89/C90 (ANSI)</param.TargetLangStandard>
+      <param.TargetLangStandard>C++03 (ISO)</param.TargetLangStandard>
       <param.CodeReplacementLibrary>None</param.CodeReplacementLibrary>
       <param.DeprecatedCRLFlag>false</param.DeprecatedCRLFlag>
       <param.SameHardware>true</param.SameHardware>
@@ -759,7 +759,7 @@
     <param.AutoInferUnboundedSizeThreshold>2048</param.AutoInferUnboundedSizeThreshold>
     <param.EnableFixedPointStep>false</param.EnableFixedPointStep>
     <param.EnableScreener>true</param.EnableScreener>
-    <param.AnnotationChecksum>1875164282</param.AnnotationChecksum>
+    <param.AnnotationChecksum>2302389037</param.AnnotationChecksum>
     <var.LegacyTarget />
     <var.MirrorOnOpen>false</var.MirrorOnOpen>
     <param.FixedPointEnabled>false</param.FixedPointEnabled>
@@ -768,13 +768,13 @@
     <param.unifiedParamStorage />
     <var.gc.lastOutputRoot>codegen/lib/function_verticalwaypoint</var.gc.lastOutputRoot>
     <var.gc.lastOutputType>C_CODE</var.gc.lastOutputType>
-    <var.gc.preBuildChecksum>4013089337</var.gc.preBuildChecksum>
+    <var.gc.preBuildChecksum>1691293493</var.gc.preBuildChecksum>
     <var.cfi.lastOutputRoot>codegen/mex/function_verticalwaypoint</var.cfi.lastOutputRoot>
-    <var.cfi.preBuildChecksum>686555918</var.cfi.preBuildChecksum>
+    <var.cfi.preBuildChecksum>2282657479</var.cfi.preBuildChecksum>
     <var.lastCfiTestSnippet>function_verticalwaypoint(waypoint,map)</var.lastCfiTestSnippet>
     <var.outdatedOnRestore>false</var.outdatedOnRestore>
-    <var.lastUserSourceChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/GPS2HIGHTC.m&lt;/file&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/HIGHT2SLOPE.m&lt;/file&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/function_verticalwaypoint.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;2043431509&lt;/value&gt;&lt;/checksum&gt;</var.lastUserSourceChecksum>
-    <var.sourceSetState>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;sourceModel&gt;&lt;primarySourceFiles&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/GPS2HIGHTC.m&lt;/file&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/HIGHT2SLOPE.m&lt;/file&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/function_verticalwaypoint.m&lt;/file&gt;&lt;/primarySourceFiles&gt;&lt;fixedPointSourceFiles/&gt;&lt;fixedPointSourceRegistered&gt;false&lt;/fixedPointSourceRegistered&gt;&lt;fixedPointSourceSelected&gt;false&lt;/fixedPointSourceSelected&gt;&lt;/sourceModel&gt;</var.sourceSetState>
+    <var.lastUserSourceChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/GPS2HIGHTC.m&lt;/file&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/HIGHT2SLOPE.m&lt;/file&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/calculate_distance.m&lt;/file&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/function_verticalwaypoint.m&lt;/file&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/increase_waypoint.m&lt;/file&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/slope_judgement.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;3251988895&lt;/value&gt;&lt;/checksum&gt;</var.lastUserSourceChecksum>
+    <var.sourceSetState>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;sourceModel&gt;&lt;primarySourceFiles&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/GPS2HIGHTC.m&lt;/file&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/HIGHT2SLOPE.m&lt;/file&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/calculate_distance.m&lt;/file&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/function_verticalwaypoint.m&lt;/file&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/increase_waypoint.m&lt;/file&gt;&lt;file&gt;/home/ken/src/Ken/pathplanning/slope_judgement.m&lt;/file&gt;&lt;/primarySourceFiles&gt;&lt;fixedPointSourceFiles/&gt;&lt;fixedPointSourceRegistered&gt;false&lt;/fixedPointSourceRegistered&gt;&lt;fixedPointSourceSelected&gt;false&lt;/fixedPointSourceSelected&gt;&lt;/sourceModel&gt;</var.sourceSetState>
     <param.forceMexBuild>false</param.forceMexBuild>
     <param.configImportActive>false</param.configImportActive>
     <var.isGpuCoder>false</var.isGpuCoder>
@@ -940,19 +940,19 @@
     </unset>
     <fileset.entrypoints>
       <file custom-data-expanded="false" value="${PROJECT_ROOT}/function_verticalwaypoint.m">
-        <Marker>1542857315317</Marker>
+        <Marker>1543217751116</Marker>
       </file>
     </fileset.entrypoints>
     <fileset.testbench />
     <fileset.inputtypes>
       <file custom-data-expanded="false" value="${PROJECT_ROOT}/function_verticalwaypoint.m">
-        <Inputs fileName="function_verticalwaypoint.m" functionName="function_verticalwaypoint" nargout="2">
+        <Inputs fileName="function_verticalwaypoint.m" functionName="function_verticalwaypoint" nargout="3">
           <Input Name="waypoint" typeId="0" />
           <Input Name="map" typeId="1" />
           <idpTable>
             <type typeId="0">
               <Class>double</Class>
-              <Size>:inf x 2</Size>
+              <Size>:2000 x 2</Size>
               <Value />
               <InitialValue />
               <UserDefined>true</UserDefined>

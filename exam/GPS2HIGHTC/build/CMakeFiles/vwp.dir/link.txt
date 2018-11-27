@@ -1,0 +1,2 @@
+/usr/bin/ar qc libvwp.a  CMakeFiles/vwp.dir/GPS2HIGHTC.cpp.o CMakeFiles/vwp.dir/GPS2HIGHTC_initialize.cpp.o CMakeFiles/vwp.dir/GPS2HIGHTC_terminate.cpp.o CMakeFiles/vwp.dir/rtGetInf.cpp.o CMakeFiles/vwp.dir/rtGetNaN.cpp.o CMakeFiles/vwp.dir/rt_nonfinite.cpp.o
+/usr/bin/ranlib libvwp.a

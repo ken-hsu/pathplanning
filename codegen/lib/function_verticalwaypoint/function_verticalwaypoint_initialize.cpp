@@ -2,7 +2,7 @@
 // File: function_verticalwaypoint_initialize.cpp
 //
 // MATLAB Coder version            : 3.4
-// C/C++ source code generated on  : 22-Nov-2018 20:56:40
+// C/C++ source code generated on  : 26-Nov-2018 15:36:13
 //
 
 // Include Files

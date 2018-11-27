@@ -1,3 +1,4 @@
 /home/ken/src/Ken/pathplanning/function_verticalwaypoint/build/CMakeFiles/edit_cache.dir
 /home/ken/src/Ken/pathplanning/function_verticalwaypoint/build/CMakeFiles/rebuild_cache.dir
 /home/ken/src/Ken/pathplanning/function_verticalwaypoint/build/CMakeFiles/opencv_test.dir
+/home/ken/src/Ken/pathplanning/function_verticalwaypoint/build/CMakeFiles/vwp.dir

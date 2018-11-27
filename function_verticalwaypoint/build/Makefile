@@ -123,32 +123,288 @@ opencv_test/fast:
 	$(MAKE) -f CMakeFiles/opencv_test.dir/build.make CMakeFiles/opencv_test.dir/build
 .PHONY : opencv_test/fast
 
-opencv_test.o: opencv_test.cpp.o
+#=============================================================================
+# Target rules for targets named vwp
 
-.PHONY : opencv_test.o
+# Build rule for target.
+vwp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 vwp
+.PHONY : vwp
+
+# fast build rule for target.
+vwp/fast:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/build
+.PHONY : vwp/fast
+
+function_verticalwaypoint.o: function_verticalwaypoint.cpp.o
+
+.PHONY : function_verticalwaypoint.o
 
 # target to build an object file
-opencv_test.cpp.o:
-	$(MAKE) -f CMakeFiles/opencv_test.dir/build.make CMakeFiles/opencv_test.dir/opencv_test.cpp.o
-.PHONY : opencv_test.cpp.o
+function_verticalwaypoint.cpp.o:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/function_verticalwaypoint.cpp.o
+.PHONY : function_verticalwaypoint.cpp.o
 
-opencv_test.i: opencv_test.cpp.i
+function_verticalwaypoint.i: function_verticalwaypoint.cpp.i
 
-.PHONY : opencv_test.i
+.PHONY : function_verticalwaypoint.i
 
 # target to preprocess a source file
-opencv_test.cpp.i:
-	$(MAKE) -f CMakeFiles/opencv_test.dir/build.make CMakeFiles/opencv_test.dir/opencv_test.cpp.i
-.PHONY : opencv_test.cpp.i
+function_verticalwaypoint.cpp.i:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/function_verticalwaypoint.cpp.i
+.PHONY : function_verticalwaypoint.cpp.i
 
-opencv_test.s: opencv_test.cpp.s
+function_verticalwaypoint.s: function_verticalwaypoint.cpp.s
 
-.PHONY : opencv_test.s
+.PHONY : function_verticalwaypoint.s
 
 # target to generate assembly for a file
-opencv_test.cpp.s:
-	$(MAKE) -f CMakeFiles/opencv_test.dir/build.make CMakeFiles/opencv_test.dir/opencv_test.cpp.s
-.PHONY : opencv_test.cpp.s
+function_verticalwaypoint.cpp.s:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/function_verticalwaypoint.cpp.s
+.PHONY : function_verticalwaypoint.cpp.s
+
+function_verticalwaypoint_emxAPI.o: function_verticalwaypoint_emxAPI.cpp.o
+
+.PHONY : function_verticalwaypoint_emxAPI.o
+
+# target to build an object file
+function_verticalwaypoint_emxAPI.cpp.o:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/function_verticalwaypoint_emxAPI.cpp.o
+.PHONY : function_verticalwaypoint_emxAPI.cpp.o
+
+function_verticalwaypoint_emxAPI.i: function_verticalwaypoint_emxAPI.cpp.i
+
+.PHONY : function_verticalwaypoint_emxAPI.i
+
+# target to preprocess a source file
+function_verticalwaypoint_emxAPI.cpp.i:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/function_verticalwaypoint_emxAPI.cpp.i
+.PHONY : function_verticalwaypoint_emxAPI.cpp.i
+
+function_verticalwaypoint_emxAPI.s: function_verticalwaypoint_emxAPI.cpp.s
+
+.PHONY : function_verticalwaypoint_emxAPI.s
+
+# target to generate assembly for a file
+function_verticalwaypoint_emxAPI.cpp.s:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/function_verticalwaypoint_emxAPI.cpp.s
+.PHONY : function_verticalwaypoint_emxAPI.cpp.s
+
+function_verticalwaypoint_emxutil.o: function_verticalwaypoint_emxutil.cpp.o
+
+.PHONY : function_verticalwaypoint_emxutil.o
+
+# target to build an object file
+function_verticalwaypoint_emxutil.cpp.o:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/function_verticalwaypoint_emxutil.cpp.o
+.PHONY : function_verticalwaypoint_emxutil.cpp.o
+
+function_verticalwaypoint_emxutil.i: function_verticalwaypoint_emxutil.cpp.i
+
+.PHONY : function_verticalwaypoint_emxutil.i
+
+# target to preprocess a source file
+function_verticalwaypoint_emxutil.cpp.i:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/function_verticalwaypoint_emxutil.cpp.i
+.PHONY : function_verticalwaypoint_emxutil.cpp.i
+
+function_verticalwaypoint_emxutil.s: function_verticalwaypoint_emxutil.cpp.s
+
+.PHONY : function_verticalwaypoint_emxutil.s
+
+# target to generate assembly for a file
+function_verticalwaypoint_emxutil.cpp.s:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/function_verticalwaypoint_emxutil.cpp.s
+.PHONY : function_verticalwaypoint_emxutil.cpp.s
+
+function_verticalwaypoint_initialize.o: function_verticalwaypoint_initialize.cpp.o
+
+.PHONY : function_verticalwaypoint_initialize.o
+
+# target to build an object file
+function_verticalwaypoint_initialize.cpp.o:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/function_verticalwaypoint_initialize.cpp.o
+.PHONY : function_verticalwaypoint_initialize.cpp.o
+
+function_verticalwaypoint_initialize.i: function_verticalwaypoint_initialize.cpp.i
+
+.PHONY : function_verticalwaypoint_initialize.i
+
+# target to preprocess a source file
+function_verticalwaypoint_initialize.cpp.i:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/function_verticalwaypoint_initialize.cpp.i
+.PHONY : function_verticalwaypoint_initialize.cpp.i
+
+function_verticalwaypoint_initialize.s: function_verticalwaypoint_initialize.cpp.s
+
+.PHONY : function_verticalwaypoint_initialize.s
+
+# target to generate assembly for a file
+function_verticalwaypoint_initialize.cpp.s:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/function_verticalwaypoint_initialize.cpp.s
+.PHONY : function_verticalwaypoint_initialize.cpp.s
+
+function_verticalwaypoint_terminate.o: function_verticalwaypoint_terminate.cpp.o
+
+.PHONY : function_verticalwaypoint_terminate.o
+
+# target to build an object file
+function_verticalwaypoint_terminate.cpp.o:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/function_verticalwaypoint_terminate.cpp.o
+.PHONY : function_verticalwaypoint_terminate.cpp.o
+
+function_verticalwaypoint_terminate.i: function_verticalwaypoint_terminate.cpp.i
+
+.PHONY : function_verticalwaypoint_terminate.i
+
+# target to preprocess a source file
+function_verticalwaypoint_terminate.cpp.i:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/function_verticalwaypoint_terminate.cpp.i
+.PHONY : function_verticalwaypoint_terminate.cpp.i
+
+function_verticalwaypoint_terminate.s: function_verticalwaypoint_terminate.cpp.s
+
+.PHONY : function_verticalwaypoint_terminate.s
+
+# target to generate assembly for a file
+function_verticalwaypoint_terminate.cpp.s:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/function_verticalwaypoint_terminate.cpp.s
+.PHONY : function_verticalwaypoint_terminate.cpp.s
+
+generate.o: generate.cpp.o
+
+.PHONY : generate.o
+
+# target to build an object file
+generate.cpp.o:
+	$(MAKE) -f CMakeFiles/opencv_test.dir/build.make CMakeFiles/opencv_test.dir/generate.cpp.o
+.PHONY : generate.cpp.o
+
+generate.i: generate.cpp.i
+
+.PHONY : generate.i
+
+# target to preprocess a source file
+generate.cpp.i:
+	$(MAKE) -f CMakeFiles/opencv_test.dir/build.make CMakeFiles/opencv_test.dir/generate.cpp.i
+.PHONY : generate.cpp.i
+
+generate.s: generate.cpp.s
+
+.PHONY : generate.s
+
+# target to generate assembly for a file
+generate.cpp.s:
+	$(MAKE) -f CMakeFiles/opencv_test.dir/build.make CMakeFiles/opencv_test.dir/generate.cpp.s
+.PHONY : generate.cpp.s
+
+increase_waypoint.o: increase_waypoint.cpp.o
+
+.PHONY : increase_waypoint.o
+
+# target to build an object file
+increase_waypoint.cpp.o:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/increase_waypoint.cpp.o
+.PHONY : increase_waypoint.cpp.o
+
+increase_waypoint.i: increase_waypoint.cpp.i
+
+.PHONY : increase_waypoint.i
+
+# target to preprocess a source file
+increase_waypoint.cpp.i:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/increase_waypoint.cpp.i
+.PHONY : increase_waypoint.cpp.i
+
+increase_waypoint.s: increase_waypoint.cpp.s
+
+.PHONY : increase_waypoint.s
+
+# target to generate assembly for a file
+increase_waypoint.cpp.s:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/increase_waypoint.cpp.s
+.PHONY : increase_waypoint.cpp.s
+
+rtGetInf.o: rtGetInf.cpp.o
+
+.PHONY : rtGetInf.o
+
+# target to build an object file
+rtGetInf.cpp.o:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/rtGetInf.cpp.o
+.PHONY : rtGetInf.cpp.o
+
+rtGetInf.i: rtGetInf.cpp.i
+
+.PHONY : rtGetInf.i
+
+# target to preprocess a source file
+rtGetInf.cpp.i:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/rtGetInf.cpp.i
+.PHONY : rtGetInf.cpp.i
+
+rtGetInf.s: rtGetInf.cpp.s
+
+.PHONY : rtGetInf.s
+
+# target to generate assembly for a file
+rtGetInf.cpp.s:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/rtGetInf.cpp.s
+.PHONY : rtGetInf.cpp.s
+
+rtGetNaN.o: rtGetNaN.cpp.o
+
+.PHONY : rtGetNaN.o
+
+# target to build an object file
+rtGetNaN.cpp.o:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/rtGetNaN.cpp.o
+.PHONY : rtGetNaN.cpp.o
+
+rtGetNaN.i: rtGetNaN.cpp.i
+
+.PHONY : rtGetNaN.i
+
+# target to preprocess a source file
+rtGetNaN.cpp.i:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/rtGetNaN.cpp.i
+.PHONY : rtGetNaN.cpp.i
+
+rtGetNaN.s: rtGetNaN.cpp.s
+
+.PHONY : rtGetNaN.s
+
+# target to generate assembly for a file
+rtGetNaN.cpp.s:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/rtGetNaN.cpp.s
+.PHONY : rtGetNaN.cpp.s
+
+rt_nonfinite.o: rt_nonfinite.cpp.o
+
+.PHONY : rt_nonfinite.o
+
+# target to build an object file
+rt_nonfinite.cpp.o:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/rt_nonfinite.cpp.o
+.PHONY : rt_nonfinite.cpp.o
+
+rt_nonfinite.i: rt_nonfinite.cpp.i
+
+.PHONY : rt_nonfinite.i
+
+# target to preprocess a source file
+rt_nonfinite.cpp.i:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/rt_nonfinite.cpp.i
+.PHONY : rt_nonfinite.cpp.i
+
+rt_nonfinite.s: rt_nonfinite.cpp.s
+
+.PHONY : rt_nonfinite.s
+
+# target to generate assembly for a file
+rt_nonfinite.cpp.s:
+	$(MAKE) -f CMakeFiles/vwp.dir/build.make CMakeFiles/vwp.dir/rt_nonfinite.cpp.s
+.PHONY : rt_nonfinite.cpp.s
 
 # Help Target
 help:
@@ -159,9 +415,37 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... opencv_test"
-	@echo "... opencv_test.o"
-	@echo "... opencv_test.i"
-	@echo "... opencv_test.s"
+	@echo "... vwp"
+	@echo "... function_verticalwaypoint.o"
+	@echo "... function_verticalwaypoint.i"
+	@echo "... function_verticalwaypoint.s"
+	@echo "... function_verticalwaypoint_emxAPI.o"
+	@echo "... function_verticalwaypoint_emxAPI.i"
+	@echo "... function_verticalwaypoint_emxAPI.s"
+	@echo "... function_verticalwaypoint_emxutil.o"
+	@echo "... function_verticalwaypoint_emxutil.i"
+	@echo "... function_verticalwaypoint_emxutil.s"
+	@echo "... function_verticalwaypoint_initialize.o"
+	@echo "... function_verticalwaypoint_initialize.i"
+	@echo "... function_verticalwaypoint_initialize.s"
+	@echo "... function_verticalwaypoint_terminate.o"
+	@echo "... function_verticalwaypoint_terminate.i"
+	@echo "... function_verticalwaypoint_terminate.s"
+	@echo "... generate.o"
+	@echo "... generate.i"
+	@echo "... generate.s"
+	@echo "... increase_waypoint.o"
+	@echo "... increase_waypoint.i"
+	@echo "... increase_waypoint.s"
+	@echo "... rtGetInf.o"
+	@echo "... rtGetInf.i"
+	@echo "... rtGetInf.s"
+	@echo "... rtGetNaN.o"
+	@echo "... rtGetNaN.i"
+	@echo "... rtGetNaN.s"
+	@echo "... rt_nonfinite.o"
+	@echo "... rt_nonfinite.i"
+	@echo "... rt_nonfinite.s"
 .PHONY : help
 
 

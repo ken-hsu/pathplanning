@@ -1,0 +1,2 @@
+/usr/bin/ar qc libvwp.a  CMakeFiles/vwp.dir/function_verticalwaypoint.cpp.o CMakeFiles/vwp.dir/function_verticalwaypoint_emxAPI.cpp.o CMakeFiles/vwp.dir/function_verticalwaypoint_emxutil.cpp.o CMakeFiles/vwp.dir/function_verticalwaypoint_initialize.cpp.o CMakeFiles/vwp.dir/function_verticalwaypoint_terminate.cpp.o CMakeFiles/vwp.dir/increase_waypoint.cpp.o CMakeFiles/vwp.dir/rtGetInf.cpp.o CMakeFiles/vwp.dir/rtGetNaN.cpp.o CMakeFiles/vwp.dir/rt_nonfinite.cpp.o
+/usr/bin/ranlib libvwp.a

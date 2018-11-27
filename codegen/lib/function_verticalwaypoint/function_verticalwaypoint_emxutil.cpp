@@ -2,7 +2,7 @@
 // File: function_verticalwaypoint_emxutil.cpp
 //
 // MATLAB Coder version            : 3.4
-// C/C++ source code generated on  : 22-Nov-2018 20:56:40
+// C/C++ source code generated on  : 26-Nov-2018 15:36:13
 //
 
 // Include Files
@@ -18,53 +18,6 @@
 // Return Type  : void
 //
 void emxEnsureCapacity_boolean_T(emxArray_boolean_T *emxArray, int oldNumel)
-{
-  int newNumel;
-  int i;
-  void *newData;
-  if (oldNumel < 0) {
-    oldNumel = 0;
-  }
-
-  newNumel = 1;
-  for (i = 0; i < emxArray->numDimensions; i++) {
-    newNumel *= emxArray->size[i];
-  }
-
-  if (newNumel > emxArray->allocatedSize) {
-    i = emxArray->allocatedSize;
-    if (i < 16) {
-      i = 16;
-    }
-
-    while (i < newNumel) {
-      if (i > 1073741823) {
-        i = MAX_int32_T;
-      } else {
-        i <<= 1;
-      }
-    }
-
-    newData = calloc((unsigned int)i, sizeof(boolean_T));
-    if (emxArray->data != NULL) {
-      memcpy(newData, (void *)emxArray->data, sizeof(boolean_T) * oldNumel);
-      if (emxArray->canFreeData) {
-        free((void *)emxArray->data);
-      }
-    }
-
-    emxArray->data = (boolean_T *)newData;
-    emxArray->allocatedSize = i;
-    emxArray->canFreeData = true;
-  }
-}
-
-//
-// Arguments    : emxArray_boolean_T *emxArray
-//                int oldNumel
-// Return Type  : void
-//
-void emxEnsureCapacity_boolean_T1(emxArray_boolean_T *emxArray, int oldNumel)
 {
   int newNumel;
   int i;
@@ -352,27 +305,6 @@ void emxFree_real_T(emxArray_real_T **pEmxArray)
 // Return Type  : void
 //
 void emxInit_boolean_T(emxArray_boolean_T **pEmxArray, int numDimensions)
-{
-  emxArray_boolean_T *emxArray;
-  int i;
-  *pEmxArray = (emxArray_boolean_T *)malloc(sizeof(emxArray_boolean_T));
-  emxArray = *pEmxArray;
-  emxArray->data = (boolean_T *)NULL;
-  emxArray->numDimensions = numDimensions;
-  emxArray->size = (int *)malloc((unsigned int)(sizeof(int) * numDimensions));
-  emxArray->allocatedSize = 0;
-  emxArray->canFreeData = true;
-  for (i = 0; i < numDimensions; i++) {
-    emxArray->size[i] = 0;
-  }
-}
-
-//
-// Arguments    : emxArray_boolean_T **pEmxArray
-//                int numDimensions
-// Return Type  : void
-//
-void emxInit_boolean_T1(emxArray_boolean_T **pEmxArray, int numDimensions)
 {
   emxArray_boolean_T *emxArray;
   int i;

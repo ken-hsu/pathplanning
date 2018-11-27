@@ -1,11 +1,14 @@
 clear all;
-% map = imread('ASTGTM2_N24E121_dem.tif');
-map = imread('ASTGTM2_N25E055_dem.tif');
-waypoint = [25.0783,55.4982;
-            25.0883,55.5082;
-            25.0983,55.5182;
-            25.0983,55.9182];
-[vertical_waypoint,index_of_waypoint,dis_accu] = function_verticalwaypoint(waypoint,map);
+map = imread('ASTGTM2_N24E121_dem.tif');
+% map = imread('ASTGTM2_N25E055_dem.tif');
+% map = imread('ASTGTM2_N47E008_dem.tif');
+
+% waypoint = [25.0783,55.4982;
+%             25.0883,55.5082;
+%             25.0983,55.5182;
+%             25.0983,55.9182];
+waypoint = [24.0001,121.0001;24.0002,121.0006];
+[vertical_waypoint,index_of_waypoint,num_point] = function_verticalwaypoint(waypoint,map);
 %% plot result
 lon = linspace(0,110574,3601);
 MetperLon = 111320*cos(waypoint(1,1)*pi/180);

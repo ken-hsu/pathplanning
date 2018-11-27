@@ -57,38 +57,38 @@ include CMakeFiles/opencv_test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/opencv_test.dir/flags.make
 
-CMakeFiles/opencv_test.dir/opencv_test.cpp.o: CMakeFiles/opencv_test.dir/flags.make
-CMakeFiles/opencv_test.dir/opencv_test.cpp.o: ../opencv_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ken/src/Ken/pathplanning/function_verticalwaypoint/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/opencv_test.dir/opencv_test.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opencv_test.dir/opencv_test.cpp.o -c /home/ken/src/Ken/pathplanning/function_verticalwaypoint/opencv_test.cpp
+CMakeFiles/opencv_test.dir/generate.cpp.o: CMakeFiles/opencv_test.dir/flags.make
+CMakeFiles/opencv_test.dir/generate.cpp.o: ../generate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ken/src/Ken/pathplanning/function_verticalwaypoint/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/opencv_test.dir/generate.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opencv_test.dir/generate.cpp.o -c /home/ken/src/Ken/pathplanning/function_verticalwaypoint/generate.cpp
 
-CMakeFiles/opencv_test.dir/opencv_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test.dir/opencv_test.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ken/src/Ken/pathplanning/function_verticalwaypoint/opencv_test.cpp > CMakeFiles/opencv_test.dir/opencv_test.cpp.i
+CMakeFiles/opencv_test.dir/generate.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencv_test.dir/generate.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ken/src/Ken/pathplanning/function_verticalwaypoint/generate.cpp > CMakeFiles/opencv_test.dir/generate.cpp.i
 
-CMakeFiles/opencv_test.dir/opencv_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test.dir/opencv_test.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ken/src/Ken/pathplanning/function_verticalwaypoint/opencv_test.cpp -o CMakeFiles/opencv_test.dir/opencv_test.cpp.s
+CMakeFiles/opencv_test.dir/generate.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencv_test.dir/generate.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ken/src/Ken/pathplanning/function_verticalwaypoint/generate.cpp -o CMakeFiles/opencv_test.dir/generate.cpp.s
 
-CMakeFiles/opencv_test.dir/opencv_test.cpp.o.requires:
+CMakeFiles/opencv_test.dir/generate.cpp.o.requires:
 
-.PHONY : CMakeFiles/opencv_test.dir/opencv_test.cpp.o.requires
+.PHONY : CMakeFiles/opencv_test.dir/generate.cpp.o.requires
 
-CMakeFiles/opencv_test.dir/opencv_test.cpp.o.provides: CMakeFiles/opencv_test.dir/opencv_test.cpp.o.requires
-	$(MAKE) -f CMakeFiles/opencv_test.dir/build.make CMakeFiles/opencv_test.dir/opencv_test.cpp.o.provides.build
-.PHONY : CMakeFiles/opencv_test.dir/opencv_test.cpp.o.provides
+CMakeFiles/opencv_test.dir/generate.cpp.o.provides: CMakeFiles/opencv_test.dir/generate.cpp.o.requires
+	$(MAKE) -f CMakeFiles/opencv_test.dir/build.make CMakeFiles/opencv_test.dir/generate.cpp.o.provides.build
+.PHONY : CMakeFiles/opencv_test.dir/generate.cpp.o.provides
 
-CMakeFiles/opencv_test.dir/opencv_test.cpp.o.provides.build: CMakeFiles/opencv_test.dir/opencv_test.cpp.o
+CMakeFiles/opencv_test.dir/generate.cpp.o.provides.build: CMakeFiles/opencv_test.dir/generate.cpp.o
 
 
 # Object files for target opencv_test
 opencv_test_OBJECTS = \
-"CMakeFiles/opencv_test.dir/opencv_test.cpp.o"
+"CMakeFiles/opencv_test.dir/generate.cpp.o"
 
 # External object files for target opencv_test
 opencv_test_EXTERNAL_OBJECTS =
 
-opencv_test: CMakeFiles/opencv_test.dir/opencv_test.cpp.o
+opencv_test: CMakeFiles/opencv_test.dir/generate.cpp.o
 opencv_test: CMakeFiles/opencv_test.dir/build.make
 opencv_test: /usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.9
 opencv_test: /usr/lib/x86_64-linux-gnu/libopencv_ts.so.2.4.9
@@ -97,6 +97,7 @@ opencv_test: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.9
 opencv_test: /usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.9
 opencv_test: /usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.9
 opencv_test: /usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.9
+opencv_test: libvwp.a
 opencv_test: /usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.9
 opencv_test: /usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.9
 opencv_test: /usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.9
@@ -117,7 +118,7 @@ CMakeFiles/opencv_test.dir/build: opencv_test
 
 .PHONY : CMakeFiles/opencv_test.dir/build
 
-CMakeFiles/opencv_test.dir/requires: CMakeFiles/opencv_test.dir/opencv_test.cpp.o.requires
+CMakeFiles/opencv_test.dir/requires: CMakeFiles/opencv_test.dir/generate.cpp.o.requires
 
 .PHONY : CMakeFiles/opencv_test.dir/requires
 

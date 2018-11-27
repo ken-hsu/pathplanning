@@ -114,7 +114,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Project
+CMAKE_PROJECT_NAME:STATIC=opencv_test
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -183,10 +183,13 @@ OpenCV_LIB_DIR_DBG:PATH=
 OpenCV_LIB_DIR_OPT:PATH=
 
 //Value Computed by CMake
-Project_BINARY_DIR:STATIC=/home/ken/src/Ken/pathplanning/function_verticalwaypoint/build
+opencv_test_BINARY_DIR:STATIC=/home/ken/src/Ken/pathplanning/function_verticalwaypoint/build
 
 //Value Computed by CMake
-Project_SOURCE_DIR:STATIC=/home/ken/src/Ken/pathplanning/function_verticalwaypoint
+opencv_test_SOURCE_DIR:STATIC=/home/ken/src/Ken/pathplanning/function_verticalwaypoint
+
+//Dependencies for target
+vwp_LIB_DEPENDS:STATIC=
 
 
 ########################

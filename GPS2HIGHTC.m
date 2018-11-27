@@ -36,13 +36,13 @@ function [H,c_record] = GPS2HIGHTC(Latitude,Lontitude,map)
         c = [LatDecRow,LonDecCollumn];
         c1 = [LatDecRow+flagLat,LonDecCollumn];
         c2 = [LatDecRow,LonDecCollumn+flagLon];
-    %     if c1(1) > 3601 || c1(1) < 1
-    %         c1(1) = c(1);
-    %     end
-    %     if c2(2) > 3601 || c2(2) < 1
-    %         c2(2) = c(2);
-    %     end
-    %     H = map(c(1),c(2));
+        if c1(1) > 3601 || c1(1) < 1
+            c1(1) = c(1);
+        end
+        if c2(2) > 3601 || c2(2) < 1
+            c2(2) = c(2);
+        end
+%         H = map(c(1),c(2));
     %     H = (map(c(1),c(2))+map(c1(1),c1(2))+map(c2(1),c2(2)))/3;
     c_record(i,:) = c;
           H(i,1) = max([map(c(1),c(2)), map(c(1),c(2)) ,map(c2(1),c2(2)) ]);

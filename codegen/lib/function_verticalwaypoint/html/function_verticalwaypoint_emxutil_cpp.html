@@ -14,7 +14,7 @@
 <a name="2"><font color="#888888 "><i>    2   </i></font></a><font color="#117755"><i>// File: function_verticalwaypoint_emxutil.cpp</i></font>
 <a name="3"><font color="#888888 "><i>    3   </i></font></a><font color="#117755"><i>//</i></font>
 <a name="4"><font color="#888888 "><i>    4   </i></font></a><font color="#117755"><i>// MATLAB Coder version            : 3.4</i></font>
-<a name="5"><font color="#888888 "><i>    5   </i></font></a><font color="#117755"><i>// C/C++ source code generated on  : 22-Nov-2018 20:56:40</i></font>
+<a name="5"><font color="#888888 "><i>    5   </i></font></a><font color="#117755"><i>// C/C++ source code generated on  : 26-Nov-2018 15:36:13</i></font>
 <a name="6"><font color="#888888 "><i>    6   </i></font></a><font color="#117755"><i>//</i></font>
 <a name="7"><font color="#888888 "><i>    7   </i></font></a>
 <a name="8"><font color="#888888 "><i>    8   </i></font></a><font color="#117755"><i>// Include Files</i></font>
@@ -72,11 +72,11 @@
 <a name="60"><font color="#888888 "><i>   60   </i></font></a><b>}</b>
 <a name="61"><font color="#888888 "><i>   61   </i></font></a>
 <a name="62"><font color="#888888 "><i>   62   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="63"><font color="#888888 "><i>   63   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_boolean_T *emxArray</i></font>
+<a name="63"><font color="#888888 "><i>   63   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_int32_T *emxArray</i></font>
 <a name="64"><font color="#888888 "><i>   64   </i></font></a><font color="#117755"><i>//                int oldNumel</i></font>
 <a name="65"><font color="#888888 "><i>   65   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
 <a name="66"><font color="#888888 "><i>   66   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="67"><font color="#888888 "><i>   67   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxEnsureCapacity_boolean_T1">emxEnsureCapacity_boolean_T1</a>(emxArray_boolean_T *emxArray, <font color="#112266"><b>int</b></font> oldNumel)
+<a name="67"><font color="#888888 "><i>   67   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxEnsureCapacity_int32_T">emxEnsureCapacity_int32_T</a>(emxArray_int32_T *emxArray, <font color="#112266"><b>int</b></font> oldNumel)
 <a name="68"><font color="#888888 "><i>   68   </i></font></a><b>{</b>
 <a name="69"><font color="#888888 "><i>   69   </i></font></a>  <font color="#112266"><b>int</b></font> newNumel;
 <a name="70"><font color="#888888 "><i>   70   </i></font></a>  <font color="#112266"><b>int</b></font> i;
@@ -104,15 +104,15 @@
 <a name="92"><font color="#888888 "><i>   92   </i></font></a>      <b>}</b>
 <a name="93"><font color="#888888 "><i>   93   </i></font></a>    <b>}</b>
 <a name="94"><font color="#888888 "><i>   94   </i></font></a>
-<a name="95"><font color="#888888 "><i>   95   </i></font></a>    newData = calloc((<font color="#112266"><b>unsigned</b></font> <font color="#112266"><b>int</b></font>)i, <font color="#112266"><b>sizeof</b></font>(<a href="rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="_self"><font color="#1122aa">boolean_T</font></a>));
+<a name="95"><font color="#888888 "><i>   95   </i></font></a>    newData = calloc((<font color="#112266"><b>unsigned</b></font> <font color="#112266"><b>int</b></font>)i, <font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>int</b></font>));
 <a name="96"><font color="#888888 "><i>   96   </i></font></a>    <font color="#112266"><b>if</b></font> (emxArray-&gt;data != NULL) <b>{</b>
-<a name="97"><font color="#888888 "><i>   97   </i></font></a>      memcpy(newData, (<font color="#112266"><b>void</b></font> *)emxArray-&gt;data, <font color="#112266"><b>sizeof</b></font>(<a href="rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="_self"><font color="#1122aa">boolean_T</font></a>) * oldNumel);
+<a name="97"><font color="#888888 "><i>   97   </i></font></a>      memcpy(newData, (<font color="#112266"><b>void</b></font> *)emxArray-&gt;data, <font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>int</b></font>) * oldNumel);
 <a name="98"><font color="#888888 "><i>   98   </i></font></a>      <font color="#112266"><b>if</b></font> (emxArray-&gt;canFreeData) <b>{</b>
 <a name="99"><font color="#888888 "><i>   99   </i></font></a>        free((<font color="#112266"><b>void</b></font> *)emxArray-&gt;data);
 <a name="100"><font color="#888888 "><i>  100   </i></font></a>      <b>}</b>
 <a name="101"><font color="#888888 "><i>  101   </i></font></a>    <b>}</b>
 <a name="102"><font color="#888888 "><i>  102   </i></font></a>
-<a name="103"><font color="#888888 "><i>  103   </i></font></a>    emxArray-&gt;data = (<a href="rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="_self"><font color="#1122aa">boolean_T</font></a> *)newData;
+<a name="103"><font color="#888888 "><i>  103   </i></font></a>    emxArray-&gt;data = (<font color="#112266"><b>int</b></font> *)newData;
 <a name="104"><font color="#888888 "><i>  104   </i></font></a>    emxArray-&gt;allocatedSize = i;
 <a name="105"><font color="#888888 "><i>  105   </i></font></a>    emxArray-&gt;canFreeData = true;
 <a name="106"><font color="#888888 "><i>  106   </i></font></a>  <b>}</b>
@@ -123,7 +123,7 @@
 <a name="111"><font color="#888888 "><i>  111   </i></font></a><font color="#117755"><i>//                int oldNumel</i></font>
 <a name="112"><font color="#888888 "><i>  112   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
 <a name="113"><font color="#888888 "><i>  113   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="114"><font color="#888888 "><i>  114   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxEnsureCapacity_int32_T">emxEnsureCapacity_int32_T</a>(emxArray_int32_T *emxArray, <font color="#112266"><b>int</b></font> oldNumel)
+<a name="114"><font color="#888888 "><i>  114   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxEnsureCapacity_int32_T1">emxEnsureCapacity_int32_T1</a>(emxArray_int32_T *emxArray, <font color="#112266"><b>int</b></font> oldNumel)
 <a name="115"><font color="#888888 "><i>  115   </i></font></a><b>{</b>
 <a name="116"><font color="#888888 "><i>  116   </i></font></a>  <font color="#112266"><b>int</b></font> newNumel;
 <a name="117"><font color="#888888 "><i>  117   </i></font></a>  <font color="#112266"><b>int</b></font> i;
@@ -166,11 +166,11 @@
 <a name="154"><font color="#888888 "><i>  154   </i></font></a><b>}</b>
 <a name="155"><font color="#888888 "><i>  155   </i></font></a>
 <a name="156"><font color="#888888 "><i>  156   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="157"><font color="#888888 "><i>  157   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_int32_T *emxArray</i></font>
+<a name="157"><font color="#888888 "><i>  157   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_real_T *emxArray</i></font>
 <a name="158"><font color="#888888 "><i>  158   </i></font></a><font color="#117755"><i>//                int oldNumel</i></font>
 <a name="159"><font color="#888888 "><i>  159   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
 <a name="160"><font color="#888888 "><i>  160   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="161"><font color="#888888 "><i>  161   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxEnsureCapacity_int32_T1">emxEnsureCapacity_int32_T1</a>(emxArray_int32_T *emxArray, <font color="#112266"><b>int</b></font> oldNumel)
+<a name="161"><font color="#888888 "><i>  161   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxEnsureCapacity_real_T">emxEnsureCapacity_real_T</a>(emxArray_real_T *emxArray, <font color="#112266"><b>int</b></font> oldNumel)
 <a name="162"><font color="#888888 "><i>  162   </i></font></a><b>{</b>
 <a name="163"><font color="#888888 "><i>  163   </i></font></a>  <font color="#112266"><b>int</b></font> newNumel;
 <a name="164"><font color="#888888 "><i>  164   </i></font></a>  <font color="#112266"><b>int</b></font> i;
@@ -198,15 +198,15 @@
 <a name="186"><font color="#888888 "><i>  186   </i></font></a>      <b>}</b>
 <a name="187"><font color="#888888 "><i>  187   </i></font></a>    <b>}</b>
 <a name="188"><font color="#888888 "><i>  188   </i></font></a>
-<a name="189"><font color="#888888 "><i>  189   </i></font></a>    newData = calloc((<font color="#112266"><b>unsigned</b></font> <font color="#112266"><b>int</b></font>)i, <font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>int</b></font>));
+<a name="189"><font color="#888888 "><i>  189   </i></font></a>    newData = calloc((<font color="#112266"><b>unsigned</b></font> <font color="#112266"><b>int</b></font>)i, <font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>double</b></font>));
 <a name="190"><font color="#888888 "><i>  190   </i></font></a>    <font color="#112266"><b>if</b></font> (emxArray-&gt;data != NULL) <b>{</b>
-<a name="191"><font color="#888888 "><i>  191   </i></font></a>      memcpy(newData, (<font color="#112266"><b>void</b></font> *)emxArray-&gt;data, <font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>int</b></font>) * oldNumel);
+<a name="191"><font color="#888888 "><i>  191   </i></font></a>      memcpy(newData, (<font color="#112266"><b>void</b></font> *)emxArray-&gt;data, <font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>double</b></font>) * oldNumel);
 <a name="192"><font color="#888888 "><i>  192   </i></font></a>      <font color="#112266"><b>if</b></font> (emxArray-&gt;canFreeData) <b>{</b>
 <a name="193"><font color="#888888 "><i>  193   </i></font></a>        free((<font color="#112266"><b>void</b></font> *)emxArray-&gt;data);
 <a name="194"><font color="#888888 "><i>  194   </i></font></a>      <b>}</b>
 <a name="195"><font color="#888888 "><i>  195   </i></font></a>    <b>}</b>
 <a name="196"><font color="#888888 "><i>  196   </i></font></a>
-<a name="197"><font color="#888888 "><i>  197   </i></font></a>    emxArray-&gt;data = (<font color="#112266"><b>int</b></font> *)newData;
+<a name="197"><font color="#888888 "><i>  197   </i></font></a>    emxArray-&gt;data = (<font color="#112266"><b>double</b></font> *)newData;
 <a name="198"><font color="#888888 "><i>  198   </i></font></a>    emxArray-&gt;allocatedSize = i;
 <a name="199"><font color="#888888 "><i>  199   </i></font></a>    emxArray-&gt;canFreeData = true;
 <a name="200"><font color="#888888 "><i>  200   </i></font></a>  <b>}</b>
@@ -217,7 +217,7 @@
 <a name="205"><font color="#888888 "><i>  205   </i></font></a><font color="#117755"><i>//                int oldNumel</i></font>
 <a name="206"><font color="#888888 "><i>  206   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
 <a name="207"><font color="#888888 "><i>  207   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="208"><font color="#888888 "><i>  208   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxEnsureCapacity_real_T">emxEnsureCapacity_real_T</a>(emxArray_real_T *emxArray, <font color="#112266"><b>int</b></font> oldNumel)
+<a name="208"><font color="#888888 "><i>  208   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxEnsureCapacity_real_T1">emxEnsureCapacity_real_T1</a>(emxArray_real_T *emxArray, <font color="#112266"><b>int</b></font> oldNumel)
 <a name="209"><font color="#888888 "><i>  209   </i></font></a><b>{</b>
 <a name="210"><font color="#888888 "><i>  210   </i></font></a>  <font color="#112266"><b>int</b></font> newNumel;
 <a name="211"><font color="#888888 "><i>  211   </i></font></a>  <font color="#112266"><b>int</b></font> i;
@@ -260,236 +260,168 @@
 <a name="248"><font color="#888888 "><i>  248   </i></font></a><b>}</b>
 <a name="249"><font color="#888888 "><i>  249   </i></font></a>
 <a name="250"><font color="#888888 "><i>  250   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="251"><font color="#888888 "><i>  251   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_real_T *emxArray</i></font>
-<a name="252"><font color="#888888 "><i>  252   </i></font></a><font color="#117755"><i>//                int oldNumel</i></font>
-<a name="253"><font color="#888888 "><i>  253   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
-<a name="254"><font color="#888888 "><i>  254   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="255"><font color="#888888 "><i>  255   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxEnsureCapacity_real_T1">emxEnsureCapacity_real_T1</a>(emxArray_real_T *emxArray, <font color="#112266"><b>int</b></font> oldNumel)
-<a name="256"><font color="#888888 "><i>  256   </i></font></a><b>{</b>
-<a name="257"><font color="#888888 "><i>  257   </i></font></a>  <font color="#112266"><b>int</b></font> newNumel;
-<a name="258"><font color="#888888 "><i>  258   </i></font></a>  <font color="#112266"><b>int</b></font> i;
-<a name="259"><font color="#888888 "><i>  259   </i></font></a>  <font color="#112266"><b>void</b></font> *newData;
-<a name="260"><font color="#888888 "><i>  260   </i></font></a>  <font color="#112266"><b>if</b></font> (oldNumel &lt; 0) <b>{</b>
-<a name="261"><font color="#888888 "><i>  261   </i></font></a>    oldNumel = 0;
-<a name="262"><font color="#888888 "><i>  262   </i></font></a>  <b>}</b>
-<a name="263"><font color="#888888 "><i>  263   </i></font></a>
-<a name="264"><font color="#888888 "><i>  264   </i></font></a>  newNumel = 1;
-<a name="265"><font color="#888888 "><i>  265   </i></font></a>  <font color="#112266"><b>for</b></font> (i = 0; i &lt; emxArray-&gt;numDimensions; i++) <b>{</b>
-<a name="266"><font color="#888888 "><i>  266   </i></font></a>    newNumel *= emxArray-&gt;size[i];
-<a name="267"><font color="#888888 "><i>  267   </i></font></a>  <b>}</b>
-<a name="268"><font color="#888888 "><i>  268   </i></font></a>
-<a name="269"><font color="#888888 "><i>  269   </i></font></a>  <font color="#112266"><b>if</b></font> (newNumel &gt; emxArray-&gt;allocatedSize) <b>{</b>
-<a name="270"><font color="#888888 "><i>  270   </i></font></a>    i = emxArray-&gt;allocatedSize;
-<a name="271"><font color="#888888 "><i>  271   </i></font></a>    <font color="#112266"><b>if</b></font> (i &lt; 16) <b>{</b>
-<a name="272"><font color="#888888 "><i>  272   </i></font></a>      i = 16;
-<a name="273"><font color="#888888 "><i>  273   </i></font></a>    <b>}</b>
-<a name="274"><font color="#888888 "><i>  274   </i></font></a>
-<a name="275"><font color="#888888 "><i>  275   </i></font></a>    <font color="#112266"><b>while</b></font> (i &lt; newNumel) <b>{</b>
-<a name="276"><font color="#888888 "><i>  276   </i></font></a>      <font color="#112266"><b>if</b></font> (i &gt; 1073741823) <b>{</b>
-<a name="277"><font color="#888888 "><i>  277   </i></font></a>        i = MAX_int32_T;
-<a name="278"><font color="#888888 "><i>  278   </i></font></a>      <b>}</b> <font color="#112266"><b>else</b></font> <b>{</b>
-<a name="279"><font color="#888888 "><i>  279   </i></font></a>        i &lt;&lt;= 1;
-<a name="280"><font color="#888888 "><i>  280   </i></font></a>      <b>}</b>
-<a name="281"><font color="#888888 "><i>  281   </i></font></a>    <b>}</b>
-<a name="282"><font color="#888888 "><i>  282   </i></font></a>
-<a name="283"><font color="#888888 "><i>  283   </i></font></a>    newData = calloc((<font color="#112266"><b>unsigned</b></font> <font color="#112266"><b>int</b></font>)i, <font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>double</b></font>));
-<a name="284"><font color="#888888 "><i>  284   </i></font></a>    <font color="#112266"><b>if</b></font> (emxArray-&gt;data != NULL) <b>{</b>
-<a name="285"><font color="#888888 "><i>  285   </i></font></a>      memcpy(newData, (<font color="#112266"><b>void</b></font> *)emxArray-&gt;data, <font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>double</b></font>) * oldNumel);
-<a name="286"><font color="#888888 "><i>  286   </i></font></a>      <font color="#112266"><b>if</b></font> (emxArray-&gt;canFreeData) <b>{</b>
-<a name="287"><font color="#888888 "><i>  287   </i></font></a>        free((<font color="#112266"><b>void</b></font> *)emxArray-&gt;data);
-<a name="288"><font color="#888888 "><i>  288   </i></font></a>      <b>}</b>
-<a name="289"><font color="#888888 "><i>  289   </i></font></a>    <b>}</b>
-<a name="290"><font color="#888888 "><i>  290   </i></font></a>
-<a name="291"><font color="#888888 "><i>  291   </i></font></a>    emxArray-&gt;data = (<font color="#112266"><b>double</b></font> *)newData;
-<a name="292"><font color="#888888 "><i>  292   </i></font></a>    emxArray-&gt;allocatedSize = i;
-<a name="293"><font color="#888888 "><i>  293   </i></font></a>    emxArray-&gt;canFreeData = true;
-<a name="294"><font color="#888888 "><i>  294   </i></font></a>  <b>}</b>
-<a name="295"><font color="#888888 "><i>  295   </i></font></a><b>}</b>
-<a name="296"><font color="#888888 "><i>  296   </i></font></a>
-<a name="297"><font color="#888888 "><i>  297   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="298"><font color="#888888 "><i>  298   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_boolean_T **pEmxArray</i></font>
-<a name="299"><font color="#888888 "><i>  299   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
-<a name="300"><font color="#888888 "><i>  300   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="301"><font color="#888888 "><i>  301   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxFree_boolean_T">emxFree_boolean_T</a>(emxArray_boolean_T **pEmxArray)
-<a name="302"><font color="#888888 "><i>  302   </i></font></a><b>{</b>
-<a name="303"><font color="#888888 "><i>  303   </i></font></a>  <font color="#112266"><b>if</b></font> (*pEmxArray != (emxArray_boolean_T *)NULL) <b>{</b>
-<a name="304"><font color="#888888 "><i>  304   </i></font></a>    <font color="#112266"><b>if</b></font> (((*pEmxArray)-&gt;data != (<a href="rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="_self"><font color="#1122aa">boolean_T</font></a> *)NULL) &amp;&amp; (*pEmxArray)-&gt;canFreeData)
-<a name="305"><font color="#888888 "><i>  305   </i></font></a>    <b>{</b>
-<a name="306"><font color="#888888 "><i>  306   </i></font></a>      free((<font color="#112266"><b>void</b></font> *)(*pEmxArray)-&gt;data);
-<a name="307"><font color="#888888 "><i>  307   </i></font></a>    <b>}</b>
-<a name="308"><font color="#888888 "><i>  308   </i></font></a>
-<a name="309"><font color="#888888 "><i>  309   </i></font></a>    free((<font color="#112266"><b>void</b></font> *)(*pEmxArray)-&gt;size);
-<a name="310"><font color="#888888 "><i>  310   </i></font></a>    free((<font color="#112266"><b>void</b></font> *)*pEmxArray);
-<a name="311"><font color="#888888 "><i>  311   </i></font></a>    *pEmxArray = (emxArray_boolean_T *)NULL;
-<a name="312"><font color="#888888 "><i>  312   </i></font></a>  <b>}</b>
-<a name="313"><font color="#888888 "><i>  313   </i></font></a><b>}</b>
-<a name="314"><font color="#888888 "><i>  314   </i></font></a>
-<a name="315"><font color="#888888 "><i>  315   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="316"><font color="#888888 "><i>  316   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_int32_T **pEmxArray</i></font>
-<a name="317"><font color="#888888 "><i>  317   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
-<a name="318"><font color="#888888 "><i>  318   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="319"><font color="#888888 "><i>  319   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxFree_int32_T">emxFree_int32_T</a>(emxArray_int32_T **pEmxArray)
-<a name="320"><font color="#888888 "><i>  320   </i></font></a><b>{</b>
-<a name="321"><font color="#888888 "><i>  321   </i></font></a>  <font color="#112266"><b>if</b></font> (*pEmxArray != (emxArray_int32_T *)NULL) <b>{</b>
-<a name="322"><font color="#888888 "><i>  322   </i></font></a>    <font color="#112266"><b>if</b></font> (((*pEmxArray)-&gt;data != (<font color="#112266"><b>int</b></font> *)NULL) &amp;&amp; (*pEmxArray)-&gt;canFreeData) <b>{</b>
-<a name="323"><font color="#888888 "><i>  323   </i></font></a>      free((<font color="#112266"><b>void</b></font> *)(*pEmxArray)-&gt;data);
-<a name="324"><font color="#888888 "><i>  324   </i></font></a>    <b>}</b>
-<a name="325"><font color="#888888 "><i>  325   </i></font></a>
-<a name="326"><font color="#888888 "><i>  326   </i></font></a>    free((<font color="#112266"><b>void</b></font> *)(*pEmxArray)-&gt;size);
-<a name="327"><font color="#888888 "><i>  327   </i></font></a>    free((<font color="#112266"><b>void</b></font> *)*pEmxArray);
-<a name="328"><font color="#888888 "><i>  328   </i></font></a>    *pEmxArray = (emxArray_int32_T *)NULL;
-<a name="329"><font color="#888888 "><i>  329   </i></font></a>  <b>}</b>
-<a name="330"><font color="#888888 "><i>  330   </i></font></a><b>}</b>
-<a name="331"><font color="#888888 "><i>  331   </i></font></a>
-<a name="332"><font color="#888888 "><i>  332   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="333"><font color="#888888 "><i>  333   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_real_T **pEmxArray</i></font>
-<a name="334"><font color="#888888 "><i>  334   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
-<a name="335"><font color="#888888 "><i>  335   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="336"><font color="#888888 "><i>  336   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxFree_real_T">emxFree_real_T</a>(emxArray_real_T **pEmxArray)
-<a name="337"><font color="#888888 "><i>  337   </i></font></a><b>{</b>
-<a name="338"><font color="#888888 "><i>  338   </i></font></a>  <font color="#112266"><b>if</b></font> (*pEmxArray != (emxArray_real_T *)NULL) <b>{</b>
-<a name="339"><font color="#888888 "><i>  339   </i></font></a>    <font color="#112266"><b>if</b></font> (((*pEmxArray)-&gt;data != (<font color="#112266"><b>double</b></font> *)NULL) &amp;&amp; (*pEmxArray)-&gt;canFreeData) <b>{</b>
-<a name="340"><font color="#888888 "><i>  340   </i></font></a>      free((<font color="#112266"><b>void</b></font> *)(*pEmxArray)-&gt;data);
-<a name="341"><font color="#888888 "><i>  341   </i></font></a>    <b>}</b>
-<a name="342"><font color="#888888 "><i>  342   </i></font></a>
-<a name="343"><font color="#888888 "><i>  343   </i></font></a>    free((<font color="#112266"><b>void</b></font> *)(*pEmxArray)-&gt;size);
-<a name="344"><font color="#888888 "><i>  344   </i></font></a>    free((<font color="#112266"><b>void</b></font> *)*pEmxArray);
-<a name="345"><font color="#888888 "><i>  345   </i></font></a>    *pEmxArray = (emxArray_real_T *)NULL;
-<a name="346"><font color="#888888 "><i>  346   </i></font></a>  <b>}</b>
-<a name="347"><font color="#888888 "><i>  347   </i></font></a><b>}</b>
-<a name="348"><font color="#888888 "><i>  348   </i></font></a>
-<a name="349"><font color="#888888 "><i>  349   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="350"><font color="#888888 "><i>  350   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_boolean_T **pEmxArray</i></font>
-<a name="351"><font color="#888888 "><i>  351   </i></font></a><font color="#117755"><i>//                int numDimensions</i></font>
-<a name="352"><font color="#888888 "><i>  352   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
-<a name="353"><font color="#888888 "><i>  353   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="354"><font color="#888888 "><i>  354   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxInit_boolean_T">emxInit_boolean_T</a>(emxArray_boolean_T **pEmxArray, <font color="#112266"><b>int</b></font> numDimensions)
-<a name="355"><font color="#888888 "><i>  355   </i></font></a><b>{</b>
-<a name="356"><font color="#888888 "><i>  356   </i></font></a>  emxArray_boolean_T *emxArray;
-<a name="357"><font color="#888888 "><i>  357   </i></font></a>  <font color="#112266"><b>int</b></font> i;
-<a name="358"><font color="#888888 "><i>  358   </i></font></a>  *pEmxArray = (emxArray_boolean_T *)malloc(<font color="#112266"><b>sizeof</b></font>(emxArray_boolean_T));
-<a name="359"><font color="#888888 "><i>  359   </i></font></a>  emxArray = *pEmxArray;
-<a name="360"><font color="#888888 "><i>  360   </i></font></a>  emxArray-&gt;data = (<a href="rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="_self"><font color="#1122aa">boolean_T</font></a> *)NULL;
-<a name="361"><font color="#888888 "><i>  361   </i></font></a>  emxArray-&gt;numDimensions = numDimensions;
-<a name="362"><font color="#888888 "><i>  362   </i></font></a>  emxArray-&gt;size = (<font color="#112266"><b>int</b></font> *)malloc((<font color="#112266"><b>unsigned</b></font> <font color="#112266"><b>int</b></font>)(<font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>int</b></font>) * numDimensions));
-<a name="363"><font color="#888888 "><i>  363   </i></font></a>  emxArray-&gt;allocatedSize = 0;
-<a name="364"><font color="#888888 "><i>  364   </i></font></a>  emxArray-&gt;canFreeData = true;
-<a name="365"><font color="#888888 "><i>  365   </i></font></a>  <font color="#112266"><b>for</b></font> (i = 0; i &lt; numDimensions; i++) <b>{</b>
-<a name="366"><font color="#888888 "><i>  366   </i></font></a>    emxArray-&gt;size[i] = 0;
-<a name="367"><font color="#888888 "><i>  367   </i></font></a>  <b>}</b>
-<a name="368"><font color="#888888 "><i>  368   </i></font></a><b>}</b>
-<a name="369"><font color="#888888 "><i>  369   </i></font></a>
-<a name="370"><font color="#888888 "><i>  370   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="371"><font color="#888888 "><i>  371   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_boolean_T **pEmxArray</i></font>
-<a name="372"><font color="#888888 "><i>  372   </i></font></a><font color="#117755"><i>//                int numDimensions</i></font>
-<a name="373"><font color="#888888 "><i>  373   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
-<a name="374"><font color="#888888 "><i>  374   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="375"><font color="#888888 "><i>  375   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxInit_boolean_T1">emxInit_boolean_T1</a>(emxArray_boolean_T **pEmxArray, <font color="#112266"><b>int</b></font> numDimensions)
-<a name="376"><font color="#888888 "><i>  376   </i></font></a><b>{</b>
-<a name="377"><font color="#888888 "><i>  377   </i></font></a>  emxArray_boolean_T *emxArray;
-<a name="378"><font color="#888888 "><i>  378   </i></font></a>  <font color="#112266"><b>int</b></font> i;
-<a name="379"><font color="#888888 "><i>  379   </i></font></a>  *pEmxArray = (emxArray_boolean_T *)malloc(<font color="#112266"><b>sizeof</b></font>(emxArray_boolean_T));
-<a name="380"><font color="#888888 "><i>  380   </i></font></a>  emxArray = *pEmxArray;
-<a name="381"><font color="#888888 "><i>  381   </i></font></a>  emxArray-&gt;data = (<a href="rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="_self"><font color="#1122aa">boolean_T</font></a> *)NULL;
-<a name="382"><font color="#888888 "><i>  382   </i></font></a>  emxArray-&gt;numDimensions = numDimensions;
-<a name="383"><font color="#888888 "><i>  383   </i></font></a>  emxArray-&gt;size = (<font color="#112266"><b>int</b></font> *)malloc((<font color="#112266"><b>unsigned</b></font> <font color="#112266"><b>int</b></font>)(<font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>int</b></font>) * numDimensions));
-<a name="384"><font color="#888888 "><i>  384   </i></font></a>  emxArray-&gt;allocatedSize = 0;
-<a name="385"><font color="#888888 "><i>  385   </i></font></a>  emxArray-&gt;canFreeData = true;
-<a name="386"><font color="#888888 "><i>  386   </i></font></a>  <font color="#112266"><b>for</b></font> (i = 0; i &lt; numDimensions; i++) <b>{</b>
-<a name="387"><font color="#888888 "><i>  387   </i></font></a>    emxArray-&gt;size[i] = 0;
-<a name="388"><font color="#888888 "><i>  388   </i></font></a>  <b>}</b>
-<a name="389"><font color="#888888 "><i>  389   </i></font></a><b>}</b>
-<a name="390"><font color="#888888 "><i>  390   </i></font></a>
-<a name="391"><font color="#888888 "><i>  391   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="392"><font color="#888888 "><i>  392   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_int32_T **pEmxArray</i></font>
-<a name="393"><font color="#888888 "><i>  393   </i></font></a><font color="#117755"><i>//                int numDimensions</i></font>
-<a name="394"><font color="#888888 "><i>  394   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
-<a name="395"><font color="#888888 "><i>  395   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="396"><font color="#888888 "><i>  396   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxInit_int32_T">emxInit_int32_T</a>(emxArray_int32_T **pEmxArray, <font color="#112266"><b>int</b></font> numDimensions)
-<a name="397"><font color="#888888 "><i>  397   </i></font></a><b>{</b>
-<a name="398"><font color="#888888 "><i>  398   </i></font></a>  emxArray_int32_T *emxArray;
-<a name="399"><font color="#888888 "><i>  399   </i></font></a>  <font color="#112266"><b>int</b></font> i;
-<a name="400"><font color="#888888 "><i>  400   </i></font></a>  *pEmxArray = (emxArray_int32_T *)malloc(<font color="#112266"><b>sizeof</b></font>(emxArray_int32_T));
-<a name="401"><font color="#888888 "><i>  401   </i></font></a>  emxArray = *pEmxArray;
-<a name="402"><font color="#888888 "><i>  402   </i></font></a>  emxArray-&gt;data = (<font color="#112266"><b>int</b></font> *)NULL;
-<a name="403"><font color="#888888 "><i>  403   </i></font></a>  emxArray-&gt;numDimensions = numDimensions;
-<a name="404"><font color="#888888 "><i>  404   </i></font></a>  emxArray-&gt;size = (<font color="#112266"><b>int</b></font> *)malloc((<font color="#112266"><b>unsigned</b></font> <font color="#112266"><b>int</b></font>)(<font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>int</b></font>) * numDimensions));
-<a name="405"><font color="#888888 "><i>  405   </i></font></a>  emxArray-&gt;allocatedSize = 0;
-<a name="406"><font color="#888888 "><i>  406   </i></font></a>  emxArray-&gt;canFreeData = true;
-<a name="407"><font color="#888888 "><i>  407   </i></font></a>  <font color="#112266"><b>for</b></font> (i = 0; i &lt; numDimensions; i++) <b>{</b>
-<a name="408"><font color="#888888 "><i>  408   </i></font></a>    emxArray-&gt;size[i] = 0;
-<a name="409"><font color="#888888 "><i>  409   </i></font></a>  <b>}</b>
-<a name="410"><font color="#888888 "><i>  410   </i></font></a><b>}</b>
-<a name="411"><font color="#888888 "><i>  411   </i></font></a>
-<a name="412"><font color="#888888 "><i>  412   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="413"><font color="#888888 "><i>  413   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_int32_T **pEmxArray</i></font>
-<a name="414"><font color="#888888 "><i>  414   </i></font></a><font color="#117755"><i>//                int numDimensions</i></font>
-<a name="415"><font color="#888888 "><i>  415   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
-<a name="416"><font color="#888888 "><i>  416   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="417"><font color="#888888 "><i>  417   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxInit_int32_T1">emxInit_int32_T1</a>(emxArray_int32_T **pEmxArray, <font color="#112266"><b>int</b></font> numDimensions)
-<a name="418"><font color="#888888 "><i>  418   </i></font></a><b>{</b>
-<a name="419"><font color="#888888 "><i>  419   </i></font></a>  emxArray_int32_T *emxArray;
-<a name="420"><font color="#888888 "><i>  420   </i></font></a>  <font color="#112266"><b>int</b></font> i;
-<a name="421"><font color="#888888 "><i>  421   </i></font></a>  *pEmxArray = (emxArray_int32_T *)malloc(<font color="#112266"><b>sizeof</b></font>(emxArray_int32_T));
-<a name="422"><font color="#888888 "><i>  422   </i></font></a>  emxArray = *pEmxArray;
-<a name="423"><font color="#888888 "><i>  423   </i></font></a>  emxArray-&gt;data = (<font color="#112266"><b>int</b></font> *)NULL;
-<a name="424"><font color="#888888 "><i>  424   </i></font></a>  emxArray-&gt;numDimensions = numDimensions;
-<a name="425"><font color="#888888 "><i>  425   </i></font></a>  emxArray-&gt;size = (<font color="#112266"><b>int</b></font> *)malloc((<font color="#112266"><b>unsigned</b></font> <font color="#112266"><b>int</b></font>)(<font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>int</b></font>) * numDimensions));
-<a name="426"><font color="#888888 "><i>  426   </i></font></a>  emxArray-&gt;allocatedSize = 0;
-<a name="427"><font color="#888888 "><i>  427   </i></font></a>  emxArray-&gt;canFreeData = true;
-<a name="428"><font color="#888888 "><i>  428   </i></font></a>  <font color="#112266"><b>for</b></font> (i = 0; i &lt; numDimensions; i++) <b>{</b>
-<a name="429"><font color="#888888 "><i>  429   </i></font></a>    emxArray-&gt;size[i] = 0;
-<a name="430"><font color="#888888 "><i>  430   </i></font></a>  <b>}</b>
-<a name="431"><font color="#888888 "><i>  431   </i></font></a><b>}</b>
-<a name="432"><font color="#888888 "><i>  432   </i></font></a>
-<a name="433"><font color="#888888 "><i>  433   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="434"><font color="#888888 "><i>  434   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_real_T **pEmxArray</i></font>
-<a name="435"><font color="#888888 "><i>  435   </i></font></a><font color="#117755"><i>//                int numDimensions</i></font>
-<a name="436"><font color="#888888 "><i>  436   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
-<a name="437"><font color="#888888 "><i>  437   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="438"><font color="#888888 "><i>  438   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxInit_real_T">emxInit_real_T</a>(emxArray_real_T **pEmxArray, <font color="#112266"><b>int</b></font> numDimensions)
-<a name="439"><font color="#888888 "><i>  439   </i></font></a><b>{</b>
-<a name="440"><font color="#888888 "><i>  440   </i></font></a>  emxArray_real_T *emxArray;
-<a name="441"><font color="#888888 "><i>  441   </i></font></a>  <font color="#112266"><b>int</b></font> i;
-<a name="442"><font color="#888888 "><i>  442   </i></font></a>  *pEmxArray = (emxArray_real_T *)malloc(<font color="#112266"><b>sizeof</b></font>(emxArray_real_T));
-<a name="443"><font color="#888888 "><i>  443   </i></font></a>  emxArray = *pEmxArray;
-<a name="444"><font color="#888888 "><i>  444   </i></font></a>  emxArray-&gt;data = (<font color="#112266"><b>double</b></font> *)NULL;
-<a name="445"><font color="#888888 "><i>  445   </i></font></a>  emxArray-&gt;numDimensions = numDimensions;
-<a name="446"><font color="#888888 "><i>  446   </i></font></a>  emxArray-&gt;size = (<font color="#112266"><b>int</b></font> *)malloc((<font color="#112266"><b>unsigned</b></font> <font color="#112266"><b>int</b></font>)(<font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>int</b></font>) * numDimensions));
-<a name="447"><font color="#888888 "><i>  447   </i></font></a>  emxArray-&gt;allocatedSize = 0;
-<a name="448"><font color="#888888 "><i>  448   </i></font></a>  emxArray-&gt;canFreeData = true;
-<a name="449"><font color="#888888 "><i>  449   </i></font></a>  <font color="#112266"><b>for</b></font> (i = 0; i &lt; numDimensions; i++) <b>{</b>
-<a name="450"><font color="#888888 "><i>  450   </i></font></a>    emxArray-&gt;size[i] = 0;
-<a name="451"><font color="#888888 "><i>  451   </i></font></a>  <b>}</b>
-<a name="452"><font color="#888888 "><i>  452   </i></font></a><b>}</b>
-<a name="453"><font color="#888888 "><i>  453   </i></font></a>
-<a name="454"><font color="#888888 "><i>  454   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="455"><font color="#888888 "><i>  455   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_real_T **pEmxArray</i></font>
-<a name="456"><font color="#888888 "><i>  456   </i></font></a><font color="#117755"><i>//                int numDimensions</i></font>
-<a name="457"><font color="#888888 "><i>  457   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
-<a name="458"><font color="#888888 "><i>  458   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="459"><font color="#888888 "><i>  459   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxInit_real_T1">emxInit_real_T1</a>(emxArray_real_T **pEmxArray, <font color="#112266"><b>int</b></font> numDimensions)
-<a name="460"><font color="#888888 "><i>  460   </i></font></a><b>{</b>
-<a name="461"><font color="#888888 "><i>  461   </i></font></a>  emxArray_real_T *emxArray;
-<a name="462"><font color="#888888 "><i>  462   </i></font></a>  <font color="#112266"><b>int</b></font> i;
-<a name="463"><font color="#888888 "><i>  463   </i></font></a>  *pEmxArray = (emxArray_real_T *)malloc(<font color="#112266"><b>sizeof</b></font>(emxArray_real_T));
-<a name="464"><font color="#888888 "><i>  464   </i></font></a>  emxArray = *pEmxArray;
-<a name="465"><font color="#888888 "><i>  465   </i></font></a>  emxArray-&gt;data = (<font color="#112266"><b>double</b></font> *)NULL;
-<a name="466"><font color="#888888 "><i>  466   </i></font></a>  emxArray-&gt;numDimensions = numDimensions;
-<a name="467"><font color="#888888 "><i>  467   </i></font></a>  emxArray-&gt;size = (<font color="#112266"><b>int</b></font> *)malloc((<font color="#112266"><b>unsigned</b></font> <font color="#112266"><b>int</b></font>)(<font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>int</b></font>) * numDimensions));
-<a name="468"><font color="#888888 "><i>  468   </i></font></a>  emxArray-&gt;allocatedSize = 0;
-<a name="469"><font color="#888888 "><i>  469   </i></font></a>  emxArray-&gt;canFreeData = true;
-<a name="470"><font color="#888888 "><i>  470   </i></font></a>  <font color="#112266"><b>for</b></font> (i = 0; i &lt; numDimensions; i++) <b>{</b>
-<a name="471"><font color="#888888 "><i>  471   </i></font></a>    emxArray-&gt;size[i] = 0;
-<a name="472"><font color="#888888 "><i>  472   </i></font></a>  <b>}</b>
-<a name="473"><font color="#888888 "><i>  473   </i></font></a><b>}</b>
-<a name="474"><font color="#888888 "><i>  474   </i></font></a>
-<a name="475"><font color="#888888 "><i>  475   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="476"><font color="#888888 "><i>  476   </i></font></a><font color="#117755"><i>// File trailer for function_verticalwaypoint_emxutil.cpp</i></font>
-<a name="477"><font color="#888888 "><i>  477   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="478"><font color="#888888 "><i>  478   </i></font></a><font color="#117755"><i>// [EOF]</i></font>
-<a name="479"><font color="#888888 "><i>  479   </i></font></a><font color="#117755"><i>//</i></font>
-<a name="480"><font color="#888888 "><i>  480   </i></font></a></pre>
+<a name="251"><font color="#888888 "><i>  251   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_boolean_T **pEmxArray</i></font>
+<a name="252"><font color="#888888 "><i>  252   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
+<a name="253"><font color="#888888 "><i>  253   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="254"><font color="#888888 "><i>  254   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxFree_boolean_T">emxFree_boolean_T</a>(emxArray_boolean_T **pEmxArray)
+<a name="255"><font color="#888888 "><i>  255   </i></font></a><b>{</b>
+<a name="256"><font color="#888888 "><i>  256   </i></font></a>  <font color="#112266"><b>if</b></font> (*pEmxArray != (emxArray_boolean_T *)NULL) <b>{</b>
+<a name="257"><font color="#888888 "><i>  257   </i></font></a>    <font color="#112266"><b>if</b></font> (((*pEmxArray)-&gt;data != (<a href="rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="_self"><font color="#1122aa">boolean_T</font></a> *)NULL) &amp;&amp; (*pEmxArray)-&gt;canFreeData)
+<a name="258"><font color="#888888 "><i>  258   </i></font></a>    <b>{</b>
+<a name="259"><font color="#888888 "><i>  259   </i></font></a>      free((<font color="#112266"><b>void</b></font> *)(*pEmxArray)-&gt;data);
+<a name="260"><font color="#888888 "><i>  260   </i></font></a>    <b>}</b>
+<a name="261"><font color="#888888 "><i>  261   </i></font></a>
+<a name="262"><font color="#888888 "><i>  262   </i></font></a>    free((<font color="#112266"><b>void</b></font> *)(*pEmxArray)-&gt;size);
+<a name="263"><font color="#888888 "><i>  263   </i></font></a>    free((<font color="#112266"><b>void</b></font> *)*pEmxArray);
+<a name="264"><font color="#888888 "><i>  264   </i></font></a>    *pEmxArray = (emxArray_boolean_T *)NULL;
+<a name="265"><font color="#888888 "><i>  265   </i></font></a>  <b>}</b>
+<a name="266"><font color="#888888 "><i>  266   </i></font></a><b>}</b>
+<a name="267"><font color="#888888 "><i>  267   </i></font></a>
+<a name="268"><font color="#888888 "><i>  268   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="269"><font color="#888888 "><i>  269   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_int32_T **pEmxArray</i></font>
+<a name="270"><font color="#888888 "><i>  270   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
+<a name="271"><font color="#888888 "><i>  271   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="272"><font color="#888888 "><i>  272   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxFree_int32_T">emxFree_int32_T</a>(emxArray_int32_T **pEmxArray)
+<a name="273"><font color="#888888 "><i>  273   </i></font></a><b>{</b>
+<a name="274"><font color="#888888 "><i>  274   </i></font></a>  <font color="#112266"><b>if</b></font> (*pEmxArray != (emxArray_int32_T *)NULL) <b>{</b>
+<a name="275"><font color="#888888 "><i>  275   </i></font></a>    <font color="#112266"><b>if</b></font> (((*pEmxArray)-&gt;data != (<font color="#112266"><b>int</b></font> *)NULL) &amp;&amp; (*pEmxArray)-&gt;canFreeData) <b>{</b>
+<a name="276"><font color="#888888 "><i>  276   </i></font></a>      free((<font color="#112266"><b>void</b></font> *)(*pEmxArray)-&gt;data);
+<a name="277"><font color="#888888 "><i>  277   </i></font></a>    <b>}</b>
+<a name="278"><font color="#888888 "><i>  278   </i></font></a>
+<a name="279"><font color="#888888 "><i>  279   </i></font></a>    free((<font color="#112266"><b>void</b></font> *)(*pEmxArray)-&gt;size);
+<a name="280"><font color="#888888 "><i>  280   </i></font></a>    free((<font color="#112266"><b>void</b></font> *)*pEmxArray);
+<a name="281"><font color="#888888 "><i>  281   </i></font></a>    *pEmxArray = (emxArray_int32_T *)NULL;
+<a name="282"><font color="#888888 "><i>  282   </i></font></a>  <b>}</b>
+<a name="283"><font color="#888888 "><i>  283   </i></font></a><b>}</b>
+<a name="284"><font color="#888888 "><i>  284   </i></font></a>
+<a name="285"><font color="#888888 "><i>  285   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="286"><font color="#888888 "><i>  286   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_real_T **pEmxArray</i></font>
+<a name="287"><font color="#888888 "><i>  287   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
+<a name="288"><font color="#888888 "><i>  288   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="289"><font color="#888888 "><i>  289   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxFree_real_T">emxFree_real_T</a>(emxArray_real_T **pEmxArray)
+<a name="290"><font color="#888888 "><i>  290   </i></font></a><b>{</b>
+<a name="291"><font color="#888888 "><i>  291   </i></font></a>  <font color="#112266"><b>if</b></font> (*pEmxArray != (emxArray_real_T *)NULL) <b>{</b>
+<a name="292"><font color="#888888 "><i>  292   </i></font></a>    <font color="#112266"><b>if</b></font> (((*pEmxArray)-&gt;data != (<font color="#112266"><b>double</b></font> *)NULL) &amp;&amp; (*pEmxArray)-&gt;canFreeData) <b>{</b>
+<a name="293"><font color="#888888 "><i>  293   </i></font></a>      free((<font color="#112266"><b>void</b></font> *)(*pEmxArray)-&gt;data);
+<a name="294"><font color="#888888 "><i>  294   </i></font></a>    <b>}</b>
+<a name="295"><font color="#888888 "><i>  295   </i></font></a>
+<a name="296"><font color="#888888 "><i>  296   </i></font></a>    free((<font color="#112266"><b>void</b></font> *)(*pEmxArray)-&gt;size);
+<a name="297"><font color="#888888 "><i>  297   </i></font></a>    free((<font color="#112266"><b>void</b></font> *)*pEmxArray);
+<a name="298"><font color="#888888 "><i>  298   </i></font></a>    *pEmxArray = (emxArray_real_T *)NULL;
+<a name="299"><font color="#888888 "><i>  299   </i></font></a>  <b>}</b>
+<a name="300"><font color="#888888 "><i>  300   </i></font></a><b>}</b>
+<a name="301"><font color="#888888 "><i>  301   </i></font></a>
+<a name="302"><font color="#888888 "><i>  302   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="303"><font color="#888888 "><i>  303   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_boolean_T **pEmxArray</i></font>
+<a name="304"><font color="#888888 "><i>  304   </i></font></a><font color="#117755"><i>//                int numDimensions</i></font>
+<a name="305"><font color="#888888 "><i>  305   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
+<a name="306"><font color="#888888 "><i>  306   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="307"><font color="#888888 "><i>  307   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxInit_boolean_T">emxInit_boolean_T</a>(emxArray_boolean_T **pEmxArray, <font color="#112266"><b>int</b></font> numDimensions)
+<a name="308"><font color="#888888 "><i>  308   </i></font></a><b>{</b>
+<a name="309"><font color="#888888 "><i>  309   </i></font></a>  emxArray_boolean_T *emxArray;
+<a name="310"><font color="#888888 "><i>  310   </i></font></a>  <font color="#112266"><b>int</b></font> i;
+<a name="311"><font color="#888888 "><i>  311   </i></font></a>  *pEmxArray = (emxArray_boolean_T *)malloc(<font color="#112266"><b>sizeof</b></font>(emxArray_boolean_T));
+<a name="312"><font color="#888888 "><i>  312   </i></font></a>  emxArray = *pEmxArray;
+<a name="313"><font color="#888888 "><i>  313   </i></font></a>  emxArray-&gt;data = (<a href="rtwtypes_h.html#type_boolean_T" onclick="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T');" target="_self"><font color="#1122aa">boolean_T</font></a> *)NULL;
+<a name="314"><font color="#888888 "><i>  314   </i></font></a>  emxArray-&gt;numDimensions = numDimensions;
+<a name="315"><font color="#888888 "><i>  315   </i></font></a>  emxArray-&gt;size = (<font color="#112266"><b>int</b></font> *)malloc((<font color="#112266"><b>unsigned</b></font> <font color="#112266"><b>int</b></font>)(<font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>int</b></font>) * numDimensions));
+<a name="316"><font color="#888888 "><i>  316   </i></font></a>  emxArray-&gt;allocatedSize = 0;
+<a name="317"><font color="#888888 "><i>  317   </i></font></a>  emxArray-&gt;canFreeData = true;
+<a name="318"><font color="#888888 "><i>  318   </i></font></a>  <font color="#112266"><b>for</b></font> (i = 0; i &lt; numDimensions; i++) <b>{</b>
+<a name="319"><font color="#888888 "><i>  319   </i></font></a>    emxArray-&gt;size[i] = 0;
+<a name="320"><font color="#888888 "><i>  320   </i></font></a>  <b>}</b>
+<a name="321"><font color="#888888 "><i>  321   </i></font></a><b>}</b>
+<a name="322"><font color="#888888 "><i>  322   </i></font></a>
+<a name="323"><font color="#888888 "><i>  323   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="324"><font color="#888888 "><i>  324   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_int32_T **pEmxArray</i></font>
+<a name="325"><font color="#888888 "><i>  325   </i></font></a><font color="#117755"><i>//                int numDimensions</i></font>
+<a name="326"><font color="#888888 "><i>  326   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
+<a name="327"><font color="#888888 "><i>  327   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="328"><font color="#888888 "><i>  328   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxInit_int32_T">emxInit_int32_T</a>(emxArray_int32_T **pEmxArray, <font color="#112266"><b>int</b></font> numDimensions)
+<a name="329"><font color="#888888 "><i>  329   </i></font></a><b>{</b>
+<a name="330"><font color="#888888 "><i>  330   </i></font></a>  emxArray_int32_T *emxArray;
+<a name="331"><font color="#888888 "><i>  331   </i></font></a>  <font color="#112266"><b>int</b></font> i;
+<a name="332"><font color="#888888 "><i>  332   </i></font></a>  *pEmxArray = (emxArray_int32_T *)malloc(<font color="#112266"><b>sizeof</b></font>(emxArray_int32_T));
+<a name="333"><font color="#888888 "><i>  333   </i></font></a>  emxArray = *pEmxArray;
+<a name="334"><font color="#888888 "><i>  334   </i></font></a>  emxArray-&gt;data = (<font color="#112266"><b>int</b></font> *)NULL;
+<a name="335"><font color="#888888 "><i>  335   </i></font></a>  emxArray-&gt;numDimensions = numDimensions;
+<a name="336"><font color="#888888 "><i>  336   </i></font></a>  emxArray-&gt;size = (<font color="#112266"><b>int</b></font> *)malloc((<font color="#112266"><b>unsigned</b></font> <font color="#112266"><b>int</b></font>)(<font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>int</b></font>) * numDimensions));
+<a name="337"><font color="#888888 "><i>  337   </i></font></a>  emxArray-&gt;allocatedSize = 0;
+<a name="338"><font color="#888888 "><i>  338   </i></font></a>  emxArray-&gt;canFreeData = true;
+<a name="339"><font color="#888888 "><i>  339   </i></font></a>  <font color="#112266"><b>for</b></font> (i = 0; i &lt; numDimensions; i++) <b>{</b>
+<a name="340"><font color="#888888 "><i>  340   </i></font></a>    emxArray-&gt;size[i] = 0;
+<a name="341"><font color="#888888 "><i>  341   </i></font></a>  <b>}</b>
+<a name="342"><font color="#888888 "><i>  342   </i></font></a><b>}</b>
+<a name="343"><font color="#888888 "><i>  343   </i></font></a>
+<a name="344"><font color="#888888 "><i>  344   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="345"><font color="#888888 "><i>  345   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_int32_T **pEmxArray</i></font>
+<a name="346"><font color="#888888 "><i>  346   </i></font></a><font color="#117755"><i>//                int numDimensions</i></font>
+<a name="347"><font color="#888888 "><i>  347   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
+<a name="348"><font color="#888888 "><i>  348   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="349"><font color="#888888 "><i>  349   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxInit_int32_T1">emxInit_int32_T1</a>(emxArray_int32_T **pEmxArray, <font color="#112266"><b>int</b></font> numDimensions)
+<a name="350"><font color="#888888 "><i>  350   </i></font></a><b>{</b>
+<a name="351"><font color="#888888 "><i>  351   </i></font></a>  emxArray_int32_T *emxArray;
+<a name="352"><font color="#888888 "><i>  352   </i></font></a>  <font color="#112266"><b>int</b></font> i;
+<a name="353"><font color="#888888 "><i>  353   </i></font></a>  *pEmxArray = (emxArray_int32_T *)malloc(<font color="#112266"><b>sizeof</b></font>(emxArray_int32_T));
+<a name="354"><font color="#888888 "><i>  354   </i></font></a>  emxArray = *pEmxArray;
+<a name="355"><font color="#888888 "><i>  355   </i></font></a>  emxArray-&gt;data = (<font color="#112266"><b>int</b></font> *)NULL;
+<a name="356"><font color="#888888 "><i>  356   </i></font></a>  emxArray-&gt;numDimensions = numDimensions;
+<a name="357"><font color="#888888 "><i>  357   </i></font></a>  emxArray-&gt;size = (<font color="#112266"><b>int</b></font> *)malloc((<font color="#112266"><b>unsigned</b></font> <font color="#112266"><b>int</b></font>)(<font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>int</b></font>) * numDimensions));
+<a name="358"><font color="#888888 "><i>  358   </i></font></a>  emxArray-&gt;allocatedSize = 0;
+<a name="359"><font color="#888888 "><i>  359   </i></font></a>  emxArray-&gt;canFreeData = true;
+<a name="360"><font color="#888888 "><i>  360   </i></font></a>  <font color="#112266"><b>for</b></font> (i = 0; i &lt; numDimensions; i++) <b>{</b>
+<a name="361"><font color="#888888 "><i>  361   </i></font></a>    emxArray-&gt;size[i] = 0;
+<a name="362"><font color="#888888 "><i>  362   </i></font></a>  <b>}</b>
+<a name="363"><font color="#888888 "><i>  363   </i></font></a><b>}</b>
+<a name="364"><font color="#888888 "><i>  364   </i></font></a>
+<a name="365"><font color="#888888 "><i>  365   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="366"><font color="#888888 "><i>  366   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_real_T **pEmxArray</i></font>
+<a name="367"><font color="#888888 "><i>  367   </i></font></a><font color="#117755"><i>//                int numDimensions</i></font>
+<a name="368"><font color="#888888 "><i>  368   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
+<a name="369"><font color="#888888 "><i>  369   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="370"><font color="#888888 "><i>  370   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxInit_real_T">emxInit_real_T</a>(emxArray_real_T **pEmxArray, <font color="#112266"><b>int</b></font> numDimensions)
+<a name="371"><font color="#888888 "><i>  371   </i></font></a><b>{</b>
+<a name="372"><font color="#888888 "><i>  372   </i></font></a>  emxArray_real_T *emxArray;
+<a name="373"><font color="#888888 "><i>  373   </i></font></a>  <font color="#112266"><b>int</b></font> i;
+<a name="374"><font color="#888888 "><i>  374   </i></font></a>  *pEmxArray = (emxArray_real_T *)malloc(<font color="#112266"><b>sizeof</b></font>(emxArray_real_T));
+<a name="375"><font color="#888888 "><i>  375   </i></font></a>  emxArray = *pEmxArray;
+<a name="376"><font color="#888888 "><i>  376   </i></font></a>  emxArray-&gt;data = (<font color="#112266"><b>double</b></font> *)NULL;
+<a name="377"><font color="#888888 "><i>  377   </i></font></a>  emxArray-&gt;numDimensions = numDimensions;
+<a name="378"><font color="#888888 "><i>  378   </i></font></a>  emxArray-&gt;size = (<font color="#112266"><b>int</b></font> *)malloc((<font color="#112266"><b>unsigned</b></font> <font color="#112266"><b>int</b></font>)(<font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>int</b></font>) * numDimensions));
+<a name="379"><font color="#888888 "><i>  379   </i></font></a>  emxArray-&gt;allocatedSize = 0;
+<a name="380"><font color="#888888 "><i>  380   </i></font></a>  emxArray-&gt;canFreeData = true;
+<a name="381"><font color="#888888 "><i>  381   </i></font></a>  <font color="#112266"><b>for</b></font> (i = 0; i &lt; numDimensions; i++) <b>{</b>
+<a name="382"><font color="#888888 "><i>  382   </i></font></a>    emxArray-&gt;size[i] = 0;
+<a name="383"><font color="#888888 "><i>  383   </i></font></a>  <b>}</b>
+<a name="384"><font color="#888888 "><i>  384   </i></font></a><b>}</b>
+<a name="385"><font color="#888888 "><i>  385   </i></font></a>
+<a name="386"><font color="#888888 "><i>  386   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="387"><font color="#888888 "><i>  387   </i></font></a><font color="#117755"><i>// Arguments    : emxArray_real_T **pEmxArray</i></font>
+<a name="388"><font color="#888888 "><i>  388   </i></font></a><font color="#117755"><i>//                int numDimensions</i></font>
+<a name="389"><font color="#888888 "><i>  389   </i></font></a><font color="#117755"><i>// Return Type  : void</i></font>
+<a name="390"><font color="#888888 "><i>  390   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="391"><font color="#888888 "><i>  391   </i></font></a><font color="#112266"><b>void</b></font> <a name="fcn_emxInit_real_T1">emxInit_real_T1</a>(emxArray_real_T **pEmxArray, <font color="#112266"><b>int</b></font> numDimensions)
+<a name="392"><font color="#888888 "><i>  392   </i></font></a><b>{</b>
+<a name="393"><font color="#888888 "><i>  393   </i></font></a>  emxArray_real_T *emxArray;
+<a name="394"><font color="#888888 "><i>  394   </i></font></a>  <font color="#112266"><b>int</b></font> i;
+<a name="395"><font color="#888888 "><i>  395   </i></font></a>  *pEmxArray = (emxArray_real_T *)malloc(<font color="#112266"><b>sizeof</b></font>(emxArray_real_T));
+<a name="396"><font color="#888888 "><i>  396   </i></font></a>  emxArray = *pEmxArray;
+<a name="397"><font color="#888888 "><i>  397   </i></font></a>  emxArray-&gt;data = (<font color="#112266"><b>double</b></font> *)NULL;
+<a name="398"><font color="#888888 "><i>  398   </i></font></a>  emxArray-&gt;numDimensions = numDimensions;
+<a name="399"><font color="#888888 "><i>  399   </i></font></a>  emxArray-&gt;size = (<font color="#112266"><b>int</b></font> *)malloc((<font color="#112266"><b>unsigned</b></font> <font color="#112266"><b>int</b></font>)(<font color="#112266"><b>sizeof</b></font>(<font color="#112266"><b>int</b></font>) * numDimensions));
+<a name="400"><font color="#888888 "><i>  400   </i></font></a>  emxArray-&gt;allocatedSize = 0;
+<a name="401"><font color="#888888 "><i>  401   </i></font></a>  emxArray-&gt;canFreeData = true;
+<a name="402"><font color="#888888 "><i>  402   </i></font></a>  <font color="#112266"><b>for</b></font> (i = 0; i &lt; numDimensions; i++) <b>{</b>
+<a name="403"><font color="#888888 "><i>  403   </i></font></a>    emxArray-&gt;size[i] = 0;
+<a name="404"><font color="#888888 "><i>  404   </i></font></a>  <b>}</b>
+<a name="405"><font color="#888888 "><i>  405   </i></font></a><b>}</b>
+<a name="406"><font color="#888888 "><i>  406   </i></font></a>
+<a name="407"><font color="#888888 "><i>  407   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="408"><font color="#888888 "><i>  408   </i></font></a><font color="#117755"><i>// File trailer for function_verticalwaypoint_emxutil.cpp</i></font>
+<a name="409"><font color="#888888 "><i>  409   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="410"><font color="#888888 "><i>  410   </i></font></a><font color="#117755"><i>// [EOF]</i></font>
+<a name="411"><font color="#888888 "><i>  411   </i></font></a><font color="#117755"><i>//</i></font>
+<a name="412"><font color="#888888 "><i>  412   </i></font></a></pre>
 </td></tr></table>
 </p>
 </body>

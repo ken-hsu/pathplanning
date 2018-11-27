@@ -2,7 +2,7 @@
 ## Makefile generated for MATLAB file/project 'function_verticalwaypoint'. 
 ## 
 ## Makefile     : function_verticalwaypoint_rtw.mk
-## Generated on : Thu Nov 22 20:56:52 2018
+## Generated on : Mon Nov 26 14:52:21 2018
 ## MATLAB Coder version: 3.4 (R2017b)
 ## 
 ## Build Info:
@@ -197,7 +197,7 @@ DEFINES = $(DEFINES_STANDARD)
 ## SOURCE FILES
 ###########################################################################
 
-SRCS = $(START_DIR)/codegen/lib/function_verticalwaypoint/function_verticalwaypoint_initialize.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/function_verticalwaypoint_terminate.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/function_verticalwaypoint.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/floor.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/sign.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/sqrt.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/GPS2HIGHTC.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/HIGHT2SLOPE.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/nullAssignment.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/function_verticalwaypoint_emxutil.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/function_verticalwaypoint_emxAPI.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/rt_nonfinite.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/rtGetNaN.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/rtGetInf.cpp
+SRCS = $(START_DIR)/codegen/lib/function_verticalwaypoint/function_verticalwaypoint_initialize.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/function_verticalwaypoint_terminate.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/function_verticalwaypoint.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/increase_waypoint.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/function_verticalwaypoint_emxutil.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/function_verticalwaypoint_emxAPI.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/rt_nonfinite.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/rtGetNaN.cpp $(START_DIR)/codegen/lib/function_verticalwaypoint/rtGetInf.cpp
 
 ALL_SRCS = $(SRCS)
 
@@ -205,7 +205,7 @@ ALL_SRCS = $(SRCS)
 ## OBJECTS
 ###########################################################################
 
-OBJS = function_verticalwaypoint_initialize.o function_verticalwaypoint_terminate.o function_verticalwaypoint.o floor.o sign.o sqrt.o GPS2HIGHTC.o HIGHT2SLOPE.o nullAssignment.o function_verticalwaypoint_emxutil.o function_verticalwaypoint_emxAPI.o rt_nonfinite.o rtGetNaN.o rtGetInf.o
+OBJS = function_verticalwaypoint_initialize.o function_verticalwaypoint_terminate.o function_verticalwaypoint.o increase_waypoint.o function_verticalwaypoint_emxutil.o function_verticalwaypoint_emxAPI.o rt_nonfinite.o rtGetNaN.o rtGetInf.o
 
 ALL_OBJS = $(OBJS)
 

@@ -1,0 +1,15 @@
+<html>
+<body>
+<script src="resources/eml_report_loadable_data.js"></script>
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="1,1" id="srcline1">1</a></span><span class="line"><span class="keyword">function</span> <span class="var type1" id="S2T1U3">slope</span> = HIGHT2SLOPE(<span class="var type1" id="S3T2U6">hight</span>,<span class="var type1" id="S4T2U7">dis</span>)</span></span>
+<span class="srcline"><span class="lineno"><a href="1,2" id="srcline2">2</a></span><span class="line">    <span class="mxinfo " id="T3:U4"><span class="var type1" id="S5T3U10">amount</span> = <span class="mxinfo " id="T3:U6">size(<span class="var type1" id="S3T2U13">hight</span>,1)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,3" id="srcline3">3</a></span><span class="line">    <span class="mxinfo " id="T1:U8"><span class="var type1" id="S2T1U17">slope</span> = <span class="mxinfo " id="T1:U10">zeros(<span class="mxinfo " id="T3:U11"><span class="var type1" id="S5T3U21">amount</span>-<span class="mxinfo " id="T3:U13">1</span></span>,1)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,4" id="srcline4">4</a></span><span class="line">    <span class="keyword">for</span> <span class="var type1" id="S8T3U26">i</span> = <span class="mxinfo " id="T3:U15">1</span> :<span class="mxinfo " id="T3:U16"><span class="mxinfo " id="T3:U17">size(<span class="var type1" id="S3T2U32">hight</span>,1)</span>-<span class="mxinfo " id="T3:U19">1</span></span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,5" id="srcline5">5</a></span><span class="line">        <span class="mxinfo " id="T3:U20"><span class="var type1" id="S9T3U37">hight_diff</span> = <span class="mxinfo " id="T3:U22"><span class="mxinfo " id="T3:U23"><span class="var type1" id="S3T2U40">hight</span>(<span class="mxinfo " id="T3:U25"><span class="var type1" id="S8T3U42">i</span>+<span class="mxinfo " id="T3:U27">1</span></span>)</span> - <span class="mxinfo " id="T3:U28"><span class="var type1" id="S3T2U45">hight</span>(<span class="var type1" id="S8T3U46">i</span>)</span></span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,6" id="srcline6">6</a></span><span class="line">        <span class="mxinfo " id="T3:U31"><span class="mxinfo " id="T3:U32"><span class="var type1" id="S2T1U50">slope</span>(<span class="var type1" id="S8T3U51">i</span>,<span class="mxinfo " id="T3:U35">1</span>)</span> = <span class="mxinfo " id="T3:U36"><span class="var type1" id="S9T3U54">hight_diff</span>/<span class="mxinfo " id="T3:U38"><span class="var type1" id="S4T2U56">dis</span>(<span class="var type1" id="S8T3U57">i</span>)</span></span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,7" id="srcline7">7</a></span><span class="line">    <span class="keyword">end</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,8" id="srcline8">8</a></span><span class="line"><span class="keyword">end</span></span></span>
+</pre>
+</body>
+</html>

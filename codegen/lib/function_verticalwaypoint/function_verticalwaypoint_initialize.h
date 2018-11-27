@@ -2,13 +2,13 @@
 // File: function_verticalwaypoint_initialize.h
 //
 // MATLAB Coder version            : 3.4
-// C/C++ source code generated on  : 22-Nov-2018 20:56:40
+// C/C++ source code generated on  : 26-Nov-2018 15:36:13
 //
 #ifndef FUNCTION_VERTICALWAYPOINT_INITIALIZE_H
 #define FUNCTION_VERTICALWAYPOINT_INITIALIZE_H
 
 // Include Files
-#include <math.h>
+#include <cmath>
 #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>

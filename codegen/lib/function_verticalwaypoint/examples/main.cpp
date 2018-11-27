@@ -2,7 +2,7 @@
 // File: main.cpp
 //
 // MATLAB Coder version            : 3.4
-// C/C++ source code generated on  : 22-Nov-2018 20:56:40
+// C/C++ source code generated on  : 26-Nov-2018 15:36:13
 //
 
 //***********************************************************************
@@ -39,7 +39,7 @@
 
 // Function Declarations
 static void argInit_3601x3601_int16_T(short result[12967201]);
-static emxArray_real_T *argInit_Unboundedx2_real_T();
+static void argInit_d2000x2_real_T(double result_data[], int result_size[2]);
 static short argInit_int16_T();
 static double argInit_real_T();
 static void main_function_verticalwaypoint();
@@ -66,31 +66,28 @@ static void argInit_3601x3601_int16_T(short result[12967201])
 }
 
 //
-// Arguments    : void
-// Return Type  : emxArray_real_T *
+// Arguments    : double result_data[]
+//                int result_size[2]
+// Return Type  : void
 //
-static emxArray_real_T *argInit_Unboundedx2_real_T()
+static void argInit_d2000x2_real_T(double result_data[], int result_size[2])
 {
-  emxArray_real_T *result;
-  static int iv1[2] = { 2, 2 };
-
   int idx0;
   int idx1;
 
   // Set the size of the array.
   // Change this size to the value that the application requires.
-  result = emxCreateND_real_T(2, *(int (*)[2])&iv1[0]);
+  result_size[0] = 2;
+  result_size[1] = 2;
 
   // Loop over the array to initialize each element.
-  for (idx0 = 0; idx0 < result->size[0U]; idx0++) {
+  for (idx0 = 0; idx0 < 2; idx0++) {
     for (idx1 = 0; idx1 < 2; idx1++) {
       // Set the value of the array element.
       // Change this value to the value that the application requires.
-      result->data[idx0 + result->size[0] * idx1] = argInit_real_T();
+      result_data[idx0 + 2 * idx1] = argInit_real_T();
     }
   }
-
-  return result;
 }
 
 //
@@ -119,22 +116,24 @@ static void main_function_verticalwaypoint()
 {
   emxArray_real_T *vertical_waypoint;
   emxArray_real_T *index_of_waypoint;
-  emxArray_real_T *waypoint;
+  double waypoint_data[4000];
+  int waypoint_size[2];
   static short iv0[12967201];
+  double num_point;
   emxInitArray_real_T(&vertical_waypoint, 2);
   emxInitArray_real_T(&index_of_waypoint, 2);
 
   // Initialize function 'function_verticalwaypoint' input arguments.
   // Initialize function input argument 'waypoint'.
-  waypoint = argInit_Unboundedx2_real_T();
+  argInit_d2000x2_real_T(waypoint_data, waypoint_size);
 
   // Initialize function input argument 'map'.
   // Call the entry-point 'function_verticalwaypoint'.
   argInit_3601x3601_int16_T(iv0);
-  function_verticalwaypoint(waypoint, iv0, vertical_waypoint, index_of_waypoint);
+  function_verticalwaypoint(waypoint_data, waypoint_size, iv0, vertical_waypoint,
+    index_of_waypoint, &num_point);
   emxDestroyArray_real_T(index_of_waypoint);
   emxDestroyArray_real_T(vertical_waypoint);
-  emxDestroyArray_real_T(waypoint);
 }
 
 //

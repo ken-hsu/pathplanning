@@ -2,7 +2,7 @@
  * File: _coder_function_verticalwaypoint_api.h
  *
  * MATLAB Coder version            : 3.4
- * C/C++ source code generated on  : 22-Nov-2018 20:56:40
+ * C/C++ source code generated on  : 26-Nov-2018 15:36:13
  */
 
 #ifndef _CODER_FUNCTION_VERTICALWAYPOINT_API_H
@@ -43,11 +43,11 @@ extern emlrtCTX emlrtRootTLSGlobal;
 extern emlrtContext emlrtContextGlobal;
 
 /* Function Declarations */
-extern void function_verticalwaypoint(emxArray_real_T *waypoint, int16_T map
-  [12967201], emxArray_real_T *vertical_waypoint, emxArray_real_T
-  *index_of_waypoint);
-extern void function_verticalwaypoint_api(const mxArray *prhs[2], const mxArray *
-  plhs[2]);
+extern void function_verticalwaypoint(real_T waypoint_data[], int32_T
+  waypoint_size[2], int16_T map[12967201], emxArray_real_T *vertical_waypoint,
+  emxArray_real_T *index_of_waypoint, real_T *num_point);
+extern void function_verticalwaypoint_api(const mxArray * const prhs[2], const
+  mxArray *plhs[3]);
 extern void function_verticalwaypoint_atexit(void);
 extern void function_verticalwaypoint_initialize(void);
 extern void function_verticalwaypoint_terminate(void);

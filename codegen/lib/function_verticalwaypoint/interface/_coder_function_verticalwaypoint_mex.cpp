@@ -2,7 +2,7 @@
  * File: _coder_function_verticalwaypoint_mex.cpp
  *
  * MATLAB Coder version            : 3.4
- * C/C++ source code generated on  : 22-Nov-2018 20:56:40
+ * C/C++ source code generated on  : 26-Nov-2018 15:36:13
  */
 
 /* Include Files */
@@ -10,23 +10,23 @@
 #include "_coder_function_verticalwaypoint_mex.h"
 
 /* Function Declarations */
-static void c_function_verticalwaypoint_mex(int32_T nlhs, mxArray *plhs[2],
+static void c_function_verticalwaypoint_mex(int32_T nlhs, mxArray *plhs[3],
   int32_T nrhs, const mxArray *prhs[2]);
 
 /* Function Definitions */
 
 /*
  * Arguments    : int32_T nlhs
- *                const mxArray *plhs[2]
+ *                const mxArray *plhs[3]
  *                int32_T nrhs
  *                const mxArray *prhs[2]
  * Return Type  : void
  */
-static void c_function_verticalwaypoint_mex(int32_T nlhs, mxArray *plhs[2],
+static void c_function_verticalwaypoint_mex(int32_T nlhs, mxArray *plhs[3],
   int32_T nrhs, const mxArray *prhs[2])
 {
   const mxArray *inputs[2];
-  const mxArray *outputs[2];
+  const mxArray *outputs[3];
   int32_T b_nlhs;
   emlrtStack st = { NULL,              /* site */
     NULL,                              /* tls */
@@ -41,7 +41,7 @@ static void c_function_verticalwaypoint_mex(int32_T nlhs, mxArray *plhs[2],
                         25, "function_verticalwaypoint");
   }
 
-  if (nlhs > 2) {
+  if (nlhs > 3) {
     emlrtErrMsgIdAndTxt(&st, "EMLRT:runTime:TooManyOutputArguments", 3, 4, 25,
                         "function_verticalwaypoint");
   }

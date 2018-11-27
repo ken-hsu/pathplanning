@@ -2,7 +2,7 @@
  * File: _coder_function_verticalwaypoint_api.c
  *
  * MATLAB Coder version            : 3.4
- * C/C++ source code generated on  : 22-Nov-2018 20:56:40
+ * C/C++ source code generated on  : 26-Nov-2018 15:36:13
  */
 
 /* Include Files */
@@ -25,16 +25,17 @@ emlrtContext emlrtContextGlobal = { true,/* bFirstTime */
 
 /* Function Declarations */
 static void b_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
-  emlrtMsgIdentifier *parentId, emxArray_real_T *y);
+  emlrtMsgIdentifier *parentId, real_T **y_data, int32_T y_size[2]);
 static const mxArray *b_emlrt_marshallOut(const emxArray_real_T *u);
 static int16_T (*c_emlrt_marshallIn(const emlrtStack *sp, const mxArray *map,
   const char_T *identifier))[12967201];
+static const mxArray *c_emlrt_marshallOut(const real_T u);
 static int16_T (*d_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
   const emlrtMsgIdentifier *parentId))[12967201];
 static void e_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src, const
-  emlrtMsgIdentifier *msgId, emxArray_real_T *ret);
+  emlrtMsgIdentifier *msgId, real_T **ret_data, int32_T ret_size[2]);
 static void emlrt_marshallIn(const emlrtStack *sp, const mxArray *waypoint,
-  const char_T *identifier, emxArray_real_T *y);
+  const char_T *identifier, real_T **y_data, int32_T y_size[2]);
 static const mxArray *emlrt_marshallOut(const emxArray_real_T *u);
 static void emxFree_real_T(emxArray_real_T **pEmxArray);
 static void emxInit_real_T(const emlrtStack *sp, emxArray_real_T **pEmxArray,
@@ -48,13 +49,16 @@ static int16_T (*f_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
  * Arguments    : const emlrtStack *sp
  *                const mxArray *u
  *                const emlrtMsgIdentifier *parentId
- *                emxArray_real_T *y
+ *                real_T **y_data
+ *                int32_T y_size[2]
  * Return Type  : void
  */
 static void b_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
-  emlrtMsgIdentifier *parentId, emxArray_real_T *y)
+  emlrtMsgIdentifier *parentId, real_T **y_data, int32_T y_size[2])
 {
-  e_emlrt_marshallIn(sp, emlrtAlias(u), parentId, y);
+  real_T *r1;
+  e_emlrt_marshallIn(sp, emlrtAlias(u), parentId, &r1, y_size);
+  *y_data = r1;
   emlrtDestroyArray(&u);
 }
 
@@ -95,12 +99,26 @@ static int16_T (*c_emlrt_marshallIn(const emlrtStack *sp, const mxArray *map,
   return y;
 }
 /*
+ * Arguments    : const real_T u
+ * Return Type  : const mxArray *
+ */
+  static const mxArray *c_emlrt_marshallOut(const real_T u)
+{
+  const mxArray *y;
+  const mxArray *m2;
+  y = NULL;
+  m2 = emlrtCreateDoubleScalar(u);
+  emlrtAssign(&y, m2);
+  return y;
+}
+
+/*
  * Arguments    : const emlrtStack *sp
  *                const mxArray *u
  *                const emlrtMsgIdentifier *parentId
  * Return Type  : int16_T (*)[12967201]
  */
-  static int16_T (*d_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
+static int16_T (*d_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u,
   const emlrtMsgIdentifier *parentId))[12967201]
 {
   int16_T (*y)[12967201];
@@ -108,29 +126,27 @@ static int16_T (*c_emlrt_marshallIn(const emlrtStack *sp, const mxArray *map,
   emlrtDestroyArray(&u);
   return y;
 }
-
 /*
  * Arguments    : const emlrtStack *sp
  *                const mxArray *src
  *                const emlrtMsgIdentifier *msgId
- *                emxArray_real_T *ret
+ *                real_T **ret_data
+ *                int32_T ret_size[2]
  * Return Type  : void
  */
-static void e_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src, const
-  emlrtMsgIdentifier *msgId, emxArray_real_T *ret)
+  static void e_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src, const
+  emlrtMsgIdentifier *msgId, real_T **ret_data, int32_T ret_size[2])
 {
-  static const int32_T dims[2] = { -1, 2 };
+  static const int32_T dims[2] = { 2000, 2 };
 
   const boolean_T bv0[2] = { true, false };
 
   int32_T iv2[2];
   emlrtCheckVsBuiltInR2012b(sp, msgId, src, "double", false, 2U, dims, &bv0[0],
     iv2);
-  ret->size[0] = iv2[0];
-  ret->size[1] = iv2[1];
-  ret->allocatedSize = ret->size[0] * ret->size[1];
-  ret->data = (real_T *)emlrtMxGetData(src);
-  ret->canFreeData = false;
+  ret_size[0] = iv2[0];
+  ret_size[1] = iv2[1];
+  *ret_data = (real_T *)emlrtMxGetData(src);
   emlrtDestroyArray(&src);
 }
 
@@ -138,17 +154,20 @@ static void e_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src, const
  * Arguments    : const emlrtStack *sp
  *                const mxArray *waypoint
  *                const char_T *identifier
- *                emxArray_real_T *y
+ *                real_T **y_data
+ *                int32_T y_size[2]
  * Return Type  : void
  */
 static void emlrt_marshallIn(const emlrtStack *sp, const mxArray *waypoint,
-  const char_T *identifier, emxArray_real_T *y)
+  const char_T *identifier, real_T **y_data, int32_T y_size[2])
 {
   emlrtMsgIdentifier thisId;
+  real_T *r0;
   thisId.fIdentifier = (const char *)identifier;
   thisId.fParent = NULL;
   thisId.bParentIsCell = false;
-  b_emlrt_marshallIn(sp, emlrtAlias(waypoint), &thisId, y);
+  b_emlrt_marshallIn(sp, emlrtAlias(waypoint), &thisId, &r0, y_size);
+  *y_data = r0;
   emlrtDestroyArray(&waypoint);
 }
 
@@ -235,17 +254,19 @@ static int16_T (*f_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
   return ret;
 }
 /*
- * Arguments    : const mxArray *prhs[2]
- *                const mxArray *plhs[2]
+ * Arguments    : const mxArray * const prhs[2]
+ *                const mxArray *plhs[3]
  * Return Type  : void
  */
-  void function_verticalwaypoint_api(const mxArray *prhs[2], const mxArray *
-  plhs[2])
+  void function_verticalwaypoint_api(const mxArray * const prhs[2], const
+  mxArray *plhs[3])
 {
-  emxArray_real_T *waypoint;
   emxArray_real_T *vertical_waypoint;
   emxArray_real_T *index_of_waypoint;
+  real_T (*waypoint_data)[4000];
+  int32_T waypoint_size[2];
   int16_T (*map)[12967201];
+  real_T num_point;
   emlrtStack st = { NULL,              /* site */
     NULL,                              /* tls */
     NULL                               /* prev */
@@ -253,27 +274,26 @@ static int16_T (*f_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
 
   st.tls = emlrtRootTLSGlobal;
   emlrtHeapReferenceStackEnterFcnR2012b(&st);
-  emxInit_real_T(&st, &waypoint, 2, true);
   emxInit_real_T(&st, &vertical_waypoint, 2, true);
   emxInit_real_T(&st, &index_of_waypoint, 2, true);
-  prhs[0] = emlrtProtectR2012b(prhs[0], 0, false, -1);
 
   /* Marshall function inputs */
-  emlrt_marshallIn(&st, emlrtAlias(prhs[0]), "waypoint", waypoint);
-  map = c_emlrt_marshallIn(&st, emlrtAlias(prhs[1]), "map");
+  emlrt_marshallIn(&st, emlrtAlias((const mxArray *)prhs[0]), "waypoint",
+                   (real_T **)&waypoint_data, waypoint_size);
+  map = c_emlrt_marshallIn(&st, emlrtAlias((const mxArray *)prhs[1]), "map");
 
   /* Invoke the target function */
-  function_verticalwaypoint(waypoint, *map, vertical_waypoint, index_of_waypoint);
+  function_verticalwaypoint(*waypoint_data, waypoint_size, *map,
+    vertical_waypoint, index_of_waypoint, &num_point);
 
   /* Marshall function outputs */
   plhs[0] = emlrt_marshallOut(vertical_waypoint);
   plhs[1] = b_emlrt_marshallOut(index_of_waypoint);
+  plhs[2] = c_emlrt_marshallOut(num_point);
   index_of_waypoint->canFreeData = false;
   emxFree_real_T(&index_of_waypoint);
   vertical_waypoint->canFreeData = false;
   emxFree_real_T(&vertical_waypoint);
-  waypoint->canFreeData = false;
-  emxFree_real_T(&waypoint);
   emlrtHeapReferenceStackLeaveFcnR2012b(&st);
 }
 
