@@ -99,7 +99,7 @@ int main(){
     int H_size[1];
     double c_record_data[8000];
     int c_record_size[2];
-        GPS2HIGHTC(waypoint_lat_data, Latitude_size, waypoint_lon_data, Lontitude_size, img_data_ptr,
+    GPS2HIGHTC(waypoint_lat_data, Latitude_size, waypoint_lon_data, Lontitude_size, img_data_ptr,
                 H_data, H_size, c_record_data, c_record_size);
     // for (int i = 0; i <(int)num_point; i++ ){
     //     printf("[Hight is %.4f || H size is %d || index row %.4f || index column %.4f ]\n",
