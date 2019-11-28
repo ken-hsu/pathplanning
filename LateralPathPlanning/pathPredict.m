@@ -13,7 +13,7 @@ delta = 0;
     g = 9.81;   % N/m
     for i = 1:600
         Radius = (Vair(i)^2)./(g*tand(theta));
-        RadInThisStep = DistanceInOneStep/Radius;
+        RadInThisStep = DistanceInOneStep/Radius; % theta = L/R
         t = [0,RadInThisStep];
         x = Radius*cos(t);
         y = Radius*sin(t);
@@ -21,7 +21,7 @@ delta = 0;
         [x,y] = CoordinationTranslate(x,y,delta,Locate(i,1),Locate(i,2));
         Locate(i+1,1) = x(2);
         Locate(i+1,2) = y(2);
-        % Updat
+        % Update
         delta = RadInThisStep + delta;
     end
     plot(Locate(:,1),Locate(:,2)); axis equal
