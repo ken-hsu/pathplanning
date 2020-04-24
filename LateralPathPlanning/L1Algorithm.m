@@ -16,10 +16,11 @@
     end
     end
     numOfWaypoint = co/3 +1;
-    waypoint_latlon = zeros(2,numOfWaypoint);
+    waypoint_latlon = zeros(3,numOfWaypoint);
     for i = 1:numOfWaypoint-1
     waypoint_latlon(1,i+1) = str2double(C{1}{29+(i-1)*19})*pi/180;
     waypoint_latlon(2,i+1) = str2double(C{1}{30+(i-1)*19})*pi/180;
+    waypoint_latlon(3,i+1) = str2double(C{1}{31+(i-1)*19});
     end
 
     % uav condition
@@ -35,7 +36,7 @@
     radiousOfEarth = 6371000;
 
     % first waypoint is home position
-    waypoint_latlon(:,1) = uavHome_latlon;
+    waypoint_latlon(1:2,1) = uavHome_latlon;
     
     % transfer latlon to meter
     waypoint_cartesianNE = [waypoint_latlon(1,:) - uavHome_latlon(1);(waypoint_latlon(2,:) - uavHome_latlon(2))*cos(uavHome_latlon(1))]*radiousOfEarth;
